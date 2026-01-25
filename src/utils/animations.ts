@@ -5,6 +5,9 @@ export function initAnimations() {
   if (typeof window === "undefined") return;
 
   gsap.registerPlugin(ScrollTrigger);
+  
+  // Refresh ScrollTrigger on each initialization
+  ScrollTrigger.refresh();
 
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -30,11 +33,21 @@ export function initAnimations() {
   // Hero text animation
   const heroTitle = document.querySelector("h1");
   if (heroTitle) {
-    gsap.from(heroTitle, {
-      y: 20,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-    });
+    // Kill any existing animations on this element
+    gsap.killTweensOf(heroTitle);
+    
+    gsap.fromTo(heroTitle, 
+      { 
+        y: 20, 
+        opacity: 0 
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
+        clearProps: "opacity" // Ensure it doesn't get stuck with inline opacity
+      }
+    );
   }
 }
