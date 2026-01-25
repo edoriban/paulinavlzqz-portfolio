@@ -1,6 +1,5 @@
 ---
-import { useTranslations, type Language } from '../utils/i18n';
-import { Ruler } from 'lucide-astro';
+import { useTranslations, type Language } from "../utils/i18n";
 
 interface Props {
   lang: Language;
@@ -9,78 +8,119 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const otherLang = lang === 'en' ? 'es' : 'en';
-const otherLangUrl = lang === 'en' ? '/es/' : '/';
+const otherLang = lang === "en" ? "es" : "en";
+const otherLangUrl = lang === "en" ? "/es/" : "/";
 ---
 
-<nav class="fixed top-0 w-full z-50 border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={lang === 'en' ? '/' : '/es/'} class="flex items-center space-x-2">
-      <Ruler class="w-5 h-5 text-primary dark:text-white" />
-      <span class="font-display font-bold text-lg tracking-tighter text-black dark:text-white">P. VELAZQUEZ</span>
-    </a>
-
-    <div class="hidden md:flex space-x-8 text-sm font-medium">
-      <a class="hover:text-black dark:hover:text-white transition-colors" href="#work">{t('nav.work')}</a>
-      <a class="hover:text-black dark:hover:text-white transition-colors" href="#philosophy">{t('nav.philosophy')}</a>
-      <a class="hover:text-black dark:hover:text-white transition-colors" href="#contact">{t('nav.contact')}</a>
+<nav
+  class="w-full grid-line-h sticky top-0 z-50 px-0"
+  style="background-color: #EFEEE9 !important; opacity: 1 !important;"
+>
+  <div class="flex w-full">
+    <!-- Technical Block -->
+    <div
+      class="w-1/12 grid-line-v h-20 flex items-center justify-center bg-[#EFEEE9] spacing-block-solid"
+    >
+      <span class="text-[10px] font-mono rotate-90 whitespace-nowrap"
+        >NAV.01</span
+      >
     </div>
 
-    <div class="flex items-center space-x-4">
-      <button
-        class="p-2 text-gray-500 hover:text-black dark:hover:text-white transition-colors"
-        id="theme-toggle"
-        aria-label="Toggle theme"
+    <!-- Main Navigation Content -->
+    <div class="flex-1 grid-line-v flex items-center">
+      <a
+        href={lang === "en" ? "/" : "/es/"}
+        class="px-6 md:px-12 font-display font-bold text-xl tracking-tight uppercase whitespace-nowrap"
       >
-        <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
-      </button>
+        Paulina Velazquez
+      </a>
 
-      <div class="border border-border-light dark:border-border-dark px-3 py-1 text-xs font-display">
-        {lang === 'en' ? (
-          <>
-            <span class="font-bold text-black dark:text-white">EN</span>
-            <span class="text-gray-400"> / </span>
-            <a href={otherLangUrl} class="text-gray-400 hover:text-black dark:hover:text-white transition-colors">ES</a>
-          </>
-        ) : (
-          <>
-            <a href={otherLangUrl} class="text-gray-400 hover:text-black dark:hover:text-white transition-colors">EN</a>
-            <span class="text-gray-400"> / </span>
-            <span class="font-bold text-black dark:text-white">ES</span>
-          </>
-        )}
+      <!-- Hatched Separator -->
+      <div class="flex-1 h-full hatch-pattern-solid border-l border-gridLine">
       </div>
+
+      <div
+        class="hidden md:flex items-center gap-8 lg:gap-12 font-medium text-sm px-12 border-l border-gridLine self-stretch"
+      >
+        <a
+          class="hover:opacity-60 transition-opacity uppercase tracking-widest text-xs"
+          href="#work">{t("nav.work")}</a
+        >
+        <a
+          class="hover:opacity-60 transition-opacity uppercase tracking-widest text-xs"
+          href="#philosophy">{t("nav.philosophy")}</a
+        >
+
+        <div class="flex gap-2 text-primary/40 font-mono text-xs">
+          {
+            lang === "en" ? (
+              <>
+                <span class="text-primary font-bold">EN</span>
+                <span>/</span>
+                <a
+                  href={otherLangUrl}
+                  class="hover:text-primary transition-colors"
+                >
+                  ES
+                </a>
+              </>
+            ) : (
+              <>
+                <a
+                  href={otherLangUrl}
+                  class="hover:text-primary transition-colors"
+                >
+                  EN
+                </a>
+                <span>/</span>
+                <span class="text-primary font-bold">ES</span>
+              </>
+            )
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Button Block -->
+    <div
+      class="w-3/12 md:w-2/12 h-20 flex items-center justify-center px-4 md:px-8"
+    >
+      <a
+        href="#contact"
+        class="w-full bg-primary text-white border border-primary px-4 md:px-6 py-2 hover:opacity-90 transition-all text-sm font-bold text-center uppercase tracking-widest"
+      >
+        {t("nav.contact")}
+      </a>
     </div>
   </div>
 </nav>
 
-<script>
-  function initThemeToggle() {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-
-    // Check local storage or system preference
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      htmlElement.classList.add('dark');
-    } else {
-      htmlElement.classList.remove('dark');
-    }
-
-    themeToggleBtn?.addEventListener('click', () => {
-      htmlElement.classList.toggle('dark');
-      if (htmlElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
-    });
+<style>
+  /* Ensure the grid line colors match the design tokens */
+  .grid-line-h {
+    border-bottom: 1px solid var(--grid-line);
+  }
+  .grid-line-v {
+    border-right: 1px solid var(--grid-line);
   }
 
-  initThemeToggle();
-  document.addEventListener('astro:page-load', initThemeToggle);
-</script>
+  .spacing-block-solid {
+    background-color: #efeee9;
+    background-image: radial-gradient(
+      var(--grid-line) 0.5px,
+      transparent 0.5px
+    );
+    background-size: 10px 10px;
+  }
+
+  .hatch-pattern-solid {
+    background-color: #efeee9;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 4px,
+      var(--grid-line) 5px,
+      var(--grid-line) 5.5px
+    );
+  }
+</style>

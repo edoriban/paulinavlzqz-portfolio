@@ -1,6 +1,6 @@
 ---
-import { useTranslations, type Language } from '../utils/i18n';
-import { Ruler } from 'lucide-astro';
+import { useTranslations, type Language } from "../utils/i18n";
+import { Ruler } from "lucide-astro";
 
 interface Props {
   lang: Language;
@@ -10,34 +10,78 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<footer class="w-full border-t border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark py-12">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <div class="col-span-1 md:col-span-2">
-      <div class="flex items-center space-x-2 mb-4">
-        <Ruler class="w-4 h-4 text-primary dark:text-white" />
-        <span class="font-display font-bold text-sm tracking-tighter text-black dark:text-white">P. VELAZQUEZ</span>
+<footer class="w-full grid-line-h bg-canvas py-16 md:py-24">
+  <div class="flex w-full min-h-[20vh]">
+    <!-- Technical Block -->
+    <div
+      class="w-1/12 grid-line-v flex items-center justify-center spacing-block"
+    >
+      <span class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40"
+        >FOOTER.01</span
+      >
+    </div>
+
+    <!-- Footer Content -->
+    <div
+      class="flex-1 px-12 md:px-16 grid grid-cols-1 md:grid-cols-4 gap-12 items-start"
+    >
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center space-x-2 mb-6">
+          <span class="font-display font-bold text-xl tracking-tight uppercase"
+            >Paulina Velazquez</span
+          >
+        </div>
+        <p
+          class="text-[10px] text-primary/60 font-mono tracking-widest uppercase leading-loose"
+        >
+          &copy; {new Date().getFullYear()} Paulina Velazquez<br />
+          {t("footer.tagline")}
+        </p>
       </div>
-      <p class="text-xs text-gray-500 max-w-xs">
-        &copy; {new Date().getFullYear()} Paulina Velazquez<br />
-        {t('footer.tagline')}
-      </p>
-    </div>
 
-    <div>
-      <h5 class="font-display text-xs font-bold text-black dark:text-white mb-4 uppercase">{t('footer.social')}</h5>
-      <ul class="space-y-2 text-xs text-gray-500">
-        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">Instagram</a></li>
-        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">LinkedIn</a></li>
-        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">Behance</a></li>
-      </ul>
-    </div>
+      <div>
+        <h5
+          class="font-display text-[11px] font-bold text-primary mb-6 uppercase tracking-widest"
+        >
+          {t("footer.social")}
+        </h5>
+        <ul
+          class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
+        >
+          <li>
+            <a class="hover:text-primary transition-colors uppercase" href="#"
+              >Instagram</a>
+          </li>
+          <li>
+            <a class="hover:text-primary transition-colors uppercase" href="#"
+              >LinkedIn</a>
+          </li>
+          <li>
+            <a class="hover:text-primary transition-colors uppercase" href="#"
+              >Behance</a>
+          </li>
+        </ul>
+      </div>
 
-    <div>
-      <h5 class="font-display text-xs font-bold text-black dark:text-white mb-4 uppercase">{t('footer.legal')}</h5>
-      <ul class="space-y-2 text-xs text-gray-500">
-        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">{t('footer.privacy')}</a></li>
-        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">{t('footer.terms')}</a></li>
-      </ul>
+      <div>
+        <h5
+          class="font-display text-[11px] font-bold text-primary mb-6 uppercase tracking-widest"
+        >
+          {t("footer.legal")}
+        </h5>
+        <ul
+          class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
+        >
+          <li>
+            <a class="hover:text-primary transition-colors uppercase" href="#"
+              >{t("footer.privacy")}</a>
+          </li>
+          <li>
+            <a class="hover:text-primary transition-colors uppercase" href="#"
+              >{t("footer.terms")}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>

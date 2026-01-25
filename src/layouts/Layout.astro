@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import type { Language } from '../utils/i18n';
+import "../styles/global.css";
+import type { Language } from "../utils/i18n";
 
 interface Props {
   title: string;
@@ -8,7 +8,11 @@ interface Props {
   description?: string;
 }
 
-const { title, lang = 'en', description = 'Paulina Velazquez - Architect Portfolio' } = Astro.props;
+const {
+  title,
+  lang = "en",
+  description = "Paulina Velazquez - Architect Portfolio",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -24,9 +28,68 @@ const { title, lang = 'en', description = 'Paulina Velazquez - Architect Portfol
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:global>
+      :root {
+        --canvas: #f5f4f0;
+        --grid-line: #e0ddd5;
+        --spacer-bg: #efeee9;
+        --terracotta: #f9e4d4;
+        --sage: #e2f0e9;
+        --cement: #e8e7f2;
+      }
+
+      body {
+        background-color: var(--canvas);
+        color: #1a1a1a;
+      }
+
+      .grid-line-h {
+        border-bottom: 1px solid var(--grid-line);
+      }
+      .grid-line-v {
+        border-right: 1px solid var(--grid-line);
+      }
+
+      .spacing-block {
+        background-color: var(--spacer-bg);
+        background-image: radial-gradient(
+          var(--grid-line) 0.5px,
+          transparent 0.5px
+        );
+        background-size: 10px 10px;
+      }
+
+      .hatch-pattern {
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 4px,
+          var(--grid-line) 7px,
+          var(--grid-line) 7px
+        );
+        opacity: 0.5;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 200,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+    </style>
   </head>
-  <body class="font-body">
+  <body class="font-sans overflow-x-hidden">
     <slot />
   </body>
 </html>

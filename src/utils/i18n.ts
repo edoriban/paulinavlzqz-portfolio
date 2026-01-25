@@ -15,15 +15,12 @@ export const ui = {
     'nav.contact': 'CONTACT',
 
     // Hero
-    'hero.since': 'Since 2009',
-    'hero.title.line1': 'Precision in',
-    'hero.title.form': 'Form',
-    'hero.title.line2': 'Legacy in',
-    'hero.title.structure': 'Structure',
-    'hero.description': 'Crafting the next generation of architectural landmarks through mathematical elegance and computational design.',
-    'hero.cta.projects': 'VIEW PROJECTS',
-    'hero.cta.contact': 'GET IN TOUCH',
-    'hero.figure': 'Fig 1.1 - Dome Structure Analysis',
+    'hero.label': 'Architectural Practice 2024',
+    'hero.title.part1': 'Defining Space.',
+    'hero.title.part2': 'Refined by',
+    'hero.title.part2.italic': 'Logic.',
+    'hero.description': 'A synthesis of brutalist honesty and technical precision. We craft structures that stand as monuments to functional clarity.',
+    'hero.cta.view': 'View Portfolio',
 
     // Selected Works
     'works.title': 'SELECTED WORKS',
@@ -73,15 +70,12 @@ export const ui = {
     'nav.contact': 'CONTACTO',
 
     // Hero
-    'hero.since': 'Desde 2009',
-    'hero.title.line1': 'Precisión en la',
-    'hero.title.form': 'Forma',
-    'hero.title.line2': 'Legado en la',
-    'hero.title.structure': 'Estructura',
-    'hero.description': 'Creando la próxima generación de hitos arquitectónicos a través de la elegancia matemática y el diseño computacional.',
-    'hero.cta.projects': 'VER PROYECTOS',
-    'hero.cta.contact': 'CONTACTAR',
-    'hero.figure': 'Fig 1.1 - Análisis de Estructura de Domo',
+    'hero.label': 'Práctica Arquitectónica 2024',
+    'hero.title.part1': 'Definiendo el Espacio.',
+    'hero.title.part2': 'Refinado por la',
+    'hero.title.part2.italic': 'Lógica.',
+    'hero.description': 'Una síntesis de honestidad brutalista y precisión técnica. Creamos estructuras que se erigen como monumentos a la claridad funcional.',
+    'hero.cta.view': 'Ver Portafolio',
 
     // Selected Works
     'works.title': 'TRABAJOS SELECCIONADOS',

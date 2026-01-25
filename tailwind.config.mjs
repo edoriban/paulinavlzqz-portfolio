@@ -5,24 +5,24 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Space Mono', 'monospace'],
-        body: ['Inter', 'sans-serif'],
-        serif: ['Georgia', 'serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
       },
       colors: {
-        primary: '#1a1a1a',
-        'background-light': '#ffffff',
-        'background-dark': '#0f0f0f',
-        'surface-light': '#f8f9fa',
-        'surface-dark': '#18181b',
-        'border-light': '#e5e7eb',
-        'border-dark': '#27272a',
-        'text-light': '#374151',
-        'text-dark': '#d4d4d8',
+        primary: '#1A1A1A',
+        canvas: '#F5F4F0',
+        gridLine: '#E0DDD5',
+        terracotta: '#F9E4D4',
+        sage: '#E2F0E9',
+        cement: '#E8E7F2',
+      },
+      borderWidth: {
+        DEFAULT: '1px',
       },
       borderRadius: {
+        none: '0px',
         DEFAULT: '0px',
-        lg: '2px',
       },
     },
   },
