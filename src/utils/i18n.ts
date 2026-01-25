@@ -71,7 +71,7 @@ export const ui = {
 
     // Hero
     'hero.label': 'Práctica Arquitectónica 2024',
-    'hero.title.part1': 'Definiendo el Espacio.',
+    'hero.title.part1': 'Espacio Definido.',
     'hero.title.part2': 'Refinado por la',
     'hero.title.part2.italic': 'Lógica.',
     'hero.description': 'Una síntesis de honestidad brutalista y precisión técnica. Creamos estructuras que se erigen como monumentos a la claridad funcional.',
