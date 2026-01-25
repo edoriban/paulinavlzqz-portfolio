@@ -13,5 +13,10 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false
     }
+  },
+  vite: {
+    optimizeDeps: {
+      include: ['three', 'gsap', 'gsap/ScrollTrigger']
+    }
   }
 });

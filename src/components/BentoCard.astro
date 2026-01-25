@@ -1,42 +1,72 @@
 ---
 interface Props {
-  colSpan?: 1 | 2 | 3 | 4;
-  rowSpan?: 1 | 2 | 3;
+  id?: string;
+  colSpan?: string;
+  rowSpan?: string;
   class?: string;
-  variant?: 'default' | 'dark' | 'surface' | 'image';
+  variant?: "canvas" | "primary" | "image";
 }
 
-const { colSpan = 1, rowSpan = 1, class: className, variant = 'default' } = Astro.props;
-
-const colSpanClasses = {
-  1: 'md:col-span-1',
-  2: 'md:col-span-2',
-  3: 'md:col-span-3',
-  4: 'md:col-span-4',
-};
-
-const rowSpanClasses = {
-  1: 'md:row-span-1',
-  2: 'md:row-span-2',
-  3: 'md:row-span-3',
-};
+const {
+  id,
+  colSpan = "span 1",
+  rowSpan = "span 1",
+  class: className,
+  variant = "canvas",
+} = Astro.props;
 
 const variantClasses = {
-  default: 'bg-background-light dark:bg-background-dark',
-  dark: 'bg-primary text-white',
-  surface: 'bg-surface-light dark:bg-surface-dark',
-  image: 'bg-white dark:bg-black',
+  canvas: "bg-canvas text-primary",
+  primary: "bg-primary text-canvas",
+  image: "bg-canvas",
 };
 ---
 
 <div
+  id={id}
   class:list={[
-    'bento-card relative overflow-hidden',
-    colSpanClasses[colSpan],
-    rowSpanClasses[rowSpan],
+    "relative overflow-hidden grid-line-v grid-line-h group",
     variantClasses[variant],
     className,
   ]}
+  style={{
+    gridColumn: colSpan,
+    gridRow: rowSpan,
+  }}
 >
-  <slot />
+  <!-- Technical Decorative Background (Dots) -->
+  {
+    variant !== "image" && (
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%">
+          <pattern
+            id="card-dots"
+            x="0"
+            y="0"
+            width="20"
+            height="20"
+            patternUnits="userSpaceOnUse"
+          >
+            <circle cx="2" cy="2" r="1" fill="currentColor" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#card-dots)" />
+        </svg>
+      </div>
+    )
+  }
+
+  <!-- Content Slot -->
+  <div class="relative z-10 w-full h-full">
+    <slot />
+  </div>
+
+  <!-- Corner Markers (Optional/Decorative) -->
+  <div
+    class="absolute top-0 left-0 w-1 h-1 border-t border-l border-primary/20"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-1 h-1 border-b border-r border-primary/20"
+  >
+  </div>
 </div>

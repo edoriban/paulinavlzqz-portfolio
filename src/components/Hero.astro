@@ -1,5 +1,7 @@
 ---
 import { useTranslations, type Language } from "../utils/i18n";
+import { Image } from "astro:assets";
+import heroTechnical from "../../public/images/hero-technical.png";
 
 interface Props {
     lang: Language;
@@ -105,8 +107,8 @@ const t = useTranslations(lang);
                 </svg>
             </div>
 
-            <img
-                src="/images/hero-technical.png"
+            <Image
+                src={heroTechnical}
                 alt="Technical architectural drawing"
                 class="relative z-10 w-[90%] h-auto grayscale mix-blend-multiply opacity-90"
             />
