@@ -6,14 +6,7 @@ import BentoGrid from "../../components/BentoGrid.astro";
 import BentoCard from "../../components/BentoCard.astro";
 import Footer from "../../components/Footer.astro";
 import { useTranslations } from "../../utils/i18n";
-import {
-  Layers,
-  TrendingUp,
-  ArrowRight,
-  Plus,
-  Mail,
-  Quote,
-} from "lucide-astro";
+import { Layers, TrendingUp, ArrowRight, Plus, Mail, Quote } from "lucide-astro";
 
 const lang = "es";
 const t = useTranslations(lang);
@@ -29,12 +22,8 @@ const t = useTranslations(lang);
       <!-- Section Header aligned to grid -->
       <div class="w-full grid-line-h h-12 flex">
         <div class="w-1/12 grid-line-v spacing-block"></div>
-        <div
-          class="w-7/12 grid-line-v px-12 md:p-20 flex items-center bg-canvas"
-        >
-          <h2
-            class="font-display text-xs font-bold tracking-[0.3em] uppercase opacity-40"
-          >
+        <div class="w-7/12 grid-line-v px-12 md:p-20 flex items-center bg-canvas">
+          <h2 class="font-display text-xs font-bold tracking-[0.3em] uppercase opacity-40">
             {t("works.title")}
           </h2>
         </div>
@@ -44,49 +33,29 @@ const t = useTranslations(lang);
 
       <BentoGrid class="w-full">
         <!-- 1/12 Lateral -->
-        <BentoCard
-          colSpan="span 1 / span 1"
-          class="spacing-block flex items-center justify-center min-h-[400px]"
-        >
-          <span
-            class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40"
-            >TRABAJOS.01</span
-          >
+        <BentoCard colSpan="span 1" class="spacing-block flex items-center justify-center min-h-[400px]">
+          <span class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40">TRABAJOS.01</span>
         </BentoCard>
 
         <!-- 7/12 Main Card -->
-        <BentoCard colSpan="span 7 / span 7" variant="canvas" class="p-0">
+        <BentoCard colSpan="span 7" variant="canvas" class="p-0">
           <div class="group relative w-full h-[600px] overflow-hidden">
             <img
               alt="Dibujo arquitectónico detallado de una sección de domo"
               class="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105 opacity-90 grayscale mix-blend-multiply"
               src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&q=80"
             />
-
-            <!-- Technical Overlay on Hover -->
-            <div
-              class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none hatch-pattern"
-            >
-            </div>
-
-            <div
-              class="absolute bottom-12 left-12 right-12 flex justify-between items-end z-20"
-            >
+            <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none hatch-pattern"></div>
+            <div class="absolute bottom-12 left-12 right-12 flex justify-between items-end z-20">
               <div class="max-w-md">
-                <span
-                  class="text-[10px] font-mono text-primary/60 tracking-widest uppercase mb-4 block"
-                >
+                <span class="text-[10px] font-mono text-primary/60 tracking-widest uppercase mb-4 block">
                   {t("works.pantheon.location")}
                 </span>
-                <h3
-                  class="font-display text-4xl md:text-5xl font-bold tracking-tight leading-none mb-2"
-                >
+                <h3 class="font-display text-4xl md:text-5xl font-bold tracking-tight leading-none mb-2">
                   {t("works.pantheon.title")}
                 </h3>
               </div>
-              <div
-                class="bg-primary text-white p-4 group-hover:bg-primary/90 transition-colors"
-              >
+              <div class="bg-primary text-white p-4 group-hover:bg-primary/90 transition-colors">
                 <ArrowRight class="w-6 h-6" />
               </div>
             </div>
@@ -94,95 +63,57 @@ const t = useTranslations(lang);
         </BentoCard>
 
         <!-- 3/12 Side Card -->
-        <BentoCard
-          colSpan="span 3 / span 3"
-          variant="primary"
-          class="p-12 md:p-16 flex flex-col justify-between"
-        >
+        <BentoCard colSpan="span 3" variant="primary" class="p-12 md:p-16 flex flex-col justify-between">
           <div>
-            <span
-              class="text-[10px] font-mono opacity-50 tracking-[0.2em] uppercase mb-10 block"
-            >
-              METRICS.V3
-            </span>
+            <span class="text-[10px] font-mono opacity-50 tracking-[0.2em] uppercase mb-10 block">METRICS.V3</span>
             <div class="space-y-12">
               <div>
-                <span class="text-xs font-mono opacity-50 uppercase block mb-2"
-                  >{t("stats.years")}</span
-                >
+                <span class="text-xs font-mono opacity-50 uppercase block mb-2">{t("stats.years")}</span>
                 <span class="text-6xl font-display font-bold">15+</span>
               </div>
               <div>
-                <span class="text-xs font-mono opacity-50 uppercase block mb-2"
-                  >{t("stats.landmarks")}</span
-                >
+                <span class="text-xs font-mono opacity-50 uppercase block mb-2">{t("stats.landmarks")}</span>
                 <span class="text-6xl font-display font-bold">50+</span>
               </div>
             </div>
           </div>
-
           <div class="pt-10 border-t border-canvas/10">
-            <p
-              class="text-xs font-mono opacity-60 leading-relaxed uppercase tracking-wider"
-            >
-              {t("works.pantheon.type")}
-            </p>
+            <p class="text-xs font-mono opacity-60 leading-relaxed uppercase tracking-wider">{t("works.pantheon.type")}</p>
           </div>
         </BentoCard>
 
         <!-- 1/12 Lateral -->
-        <BentoCard
-          colSpan="span 1 / span 1"
-          class="spacing-block min-h-[400px]"
-        />
+        <BentoCard colSpan="span 1" class="spacing-block min-h-[400px]" />
       </BentoGrid>
+
+      <!-- Second Cluster Header -->
+      <div class="w-full grid-line-h h-12 flex">
+        <div class="w-1/12 grid-line-v spacing-block"></div>
+        <div class="w-10/12 grid-line-v bg-canvas"></div>
+        <div class="w-1/12 spacing-block"></div>
+      </div>
 
       <BentoGrid class="w-full">
         <!-- 1/12 Lateral -->
-        <BentoCard
-          colSpan="span 1 / span 1"
-          class="spacing-block flex items-center justify-center min-h-[500px]"
-        >
-          <span
-            class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40"
-            >TECHNICAL.02</span
-          >
+        <BentoCard colSpan="span 1" class="spacing-block flex items-center justify-center min-h-[500px]">
+          <span class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40">TECHNICAL.02</span>
         </BentoCard>
 
         <!-- 3/12 Expertise Card -->
-        <BentoCard
-          colSpan="span 3 / span 3"
-          variant="canvas"
-          class="p-12 md:p-16 flex flex-col justify-between"
-        >
+        <BentoCard colSpan="span 3" variant="canvas" class="p-12 md:p-16 flex flex-col justify-between">
           <div class="mb-12">
-            <div
-              class="w-10 h-10 border border-primary flex items-center justify-center mb-10"
-            >
+            <div class="w-10 h-10 border border-primary flex items-center justify-center mb-10">
               <Layers class="w-5 h-5" />
             </div>
-            <h4
-              class="font-display text-[10px] uppercase tracking-[0.3em] text-primary/40 mb-4"
-            >
-              {t("expertise.label")}
-            </h4>
-            <p
-              class="text-3xl font-display font-bold leading-tight tracking-tight"
-            >
-              {t("expertise.title")}
-            </p>
+            <h4 class="font-display text-[10px] uppercase tracking-[0.3em] text-primary/40 mb-4">{t("expertise.label")}</h4>
+            <p class="text-3xl font-display font-bold leading-tight tracking-tight">{t("expertise.title")}</p>
           </div>
-
           <div class="space-y-6 pt-10 border-t border-gridLine">
-            <div
-              class="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest opacity-60"
-            >
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest opacity-60">
               <span>V-RAY / RHINO</span>
               <span>01</span>
             </div>
-            <div
-              class="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest opacity-60"
-            >
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest opacity-60">
               <span>PARAMETRIC</span>
               <span>02</span>
             </div>
@@ -190,39 +121,22 @@ const t = useTranslations(lang);
         </BentoCard>
 
         <!-- 7/12 Secondary Project Card -->
-        <BentoCard colSpan="span 7 / span 7" variant="canvas" class="p-0">
+        <BentoCard colSpan="span 7" variant="canvas" class="p-0">
           <div class="group relative w-full h-[500px] overflow-hidden">
             <img
               alt="Torre Vertex"
               class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105 opacity-90 grayscale mix-blend-multiply"
               src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1000&q=80"
             />
-            <div
-              class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none hatch-pattern"
-            >
-            </div>
-
-            <div
-              class="absolute inset-0 p-12 flex flex-col justify-between z-20"
-            >
+            <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none hatch-pattern"></div>
+            <div class="absolute inset-0 p-12 flex flex-col justify-between z-20">
               <div class="flex justify-between items-start">
-                <span
-                  class="bg-primary text-white text-[9px] px-2 py-1 tracking-widest uppercase font-mono"
-                  >EST: 2024</span
-                >
-                <span
-                  class="text-[10px] font-mono text-primary/40 uppercase tracking-widest"
-                  >PROJ: {t("vertex.location")}</span
-                >
+                <span class="bg-primary text-white text-[9px] px-2 py-1 tracking-widest uppercase font-mono">EST: 2024</span>
+                <span class="text-[10px] font-mono text-primary/40 uppercase tracking-widest">PROJ: {t("vertex.location")}</span>
               </div>
-
               <div class="flex justify-between items-end">
-                <h3 class="font-display text-4xl font-bold tracking-tight">
-                  {t("vertex.title")}
-                </h3>
-                <div
-                  class="w-12 h-12 border border-primary flex items-center justify-center group-hover:bg-primary transition-all group-hover:text-white"
-                >
+                <h3 class="font-display text-4xl font-bold tracking-tight">{t("vertex.title")}</h3>
+                <div class="w-12 h-12 border border-primary flex items-center justify-center group-hover:bg-primary transition-all group-hover:text-white">
                   <ArrowRight class="w-5 h-5" />
                 </div>
               </div>
@@ -231,13 +145,10 @@ const t = useTranslations(lang);
         </BentoCard>
 
         <!-- 1/12 Lateral -->
-        <BentoCard
-          colSpan="span 1 / span 1"
-          class="spacing-block min-h-[500px]"
-        />
+        <BentoCard colSpan="span 1" class="spacing-block min-h-[500px]" />
       </BentoGrid>
 
-      <!-- Philosophy & Contact Section -->
+      <!-- Philosophy Section -->
       <div class="w-full grid-line-h h-12 flex">
         <div class="w-1/12 grid-line-v spacing-block"></div>
         <div class="w-10/12 grid-line-v bg-canvas"></div>
@@ -245,40 +156,15 @@ const t = useTranslations(lang);
       </div>
 
       <BentoGrid class="w-full">
-        <BentoCard
-          colSpan="span 1 / span 1"
-          class="spacing-block min-h-[300px]"
-        />
-
-        <BentoCard
-          id="philosophy"
-          colSpan="span 10 / span 10"
-          variant="primary"
-          class="p-16 md:p-24 flex items-center justify-center"
-        >
+        <BentoCard colSpan="span 1" class="spacing-block min-h-[300px]" />
+        <BentoCard id="philosophy" colSpan="span 10" variant="primary" class="p-16 md:p-24 flex items-center justify-center">
           <div class="max-w-4xl text-center">
-            <span
-              class="block text-canvas/40 text-[10px] font-mono tracking-[0.4em] uppercase mb-12"
-            >
-              {t("philosophy.label")}
-            </span>
-            <p
-              class="text-3xl md:text-5xl font-display italic font-light leading-[1.2] mb-12"
-            >
-              {t("philosophy.quote")}
-            </p>
-            <span
-              class="block text-canvas/60 text-xs font-mono uppercase tracking-[0.2em]"
-            >
-              {t("philosophy.author")}
-            </span>
+            <span class="block text-canvas/40 text-[10px] font-mono tracking-[0.4em] uppercase mb-12">{t("philosophy.label")}</span>
+            <p class="text-3xl md:text-5xl font-display italic font-light leading-[1.2] mb-12">{t("philosophy.quote")}</p>
+            <span class="block text-canvas/60 text-xs font-mono uppercase tracking-[0.2em]">{t("philosophy.author")}</span>
           </div>
         </BentoCard>
-
-        <BentoCard
-          colSpan="span 1 / span 1"
-          class="spacing-block min-h-[300px]"
-        />
+        <BentoCard colSpan="span 1" class="spacing-block min-h-[300px]" />
       </BentoGrid>
     </section>
 
@@ -286,25 +172,12 @@ const t = useTranslations(lang);
     <section id="contact" class="w-full grid-line-h">
       <div class="flex w-full min-h-[40vh]">
         <div class="w-1/12 grid-line-v spacing-block"></div>
-        <div
-          class="w-10/12 grid-line-v p-16 md:p-24 flex flex-col items-center justify-center bg-canvas text-center"
-        >
-          <h2
-            class="font-display text-5xl md:text-7xl font-bold tracking-tight mb-10"
-          >
-            {t("contact.title")}
-          </h2>
-          <p class="text-xl text-primary/60 font-light mb-12 max-w-xl">
-            {t("contact.description")}
-          </p>
-          <a
-            href="mailto:hello@paulinavlzqz.com"
-            class="group flex items-center gap-6 text-2xl font-display font-bold hover:opacity-70 transition-opacity"
-          >
+        <div class="w-10/12 grid-line-v p-16 md:p-24 flex flex-col items-center justify-center bg-canvas text-center">
+          <h2 class="font-display text-5xl md:text-7xl font-bold tracking-tight mb-10">{t("contact.title")}</h2>
+          <p class="text-xl text-primary/60 font-light mb-12 max-w-xl">{t("contact.description")}</p>
+          <a href="mailto:hello@paulinavlzqz.com" class="group flex items-center gap-6 text-2xl font-display font-bold hover:opacity-70 transition-opacity">
             hello@paulinavlzqz.com
-            <div
-              class="w-12 h-12 border border-primary flex items-center justify-center group-hover:translate-x-2 transition-transform"
-            >
+            <div class="w-12 h-12 border border-primary flex items-center justify-center group-hover:translate-x-2 transition-transform">
               <ArrowRight class="w-5 h-5" />
             </div>
           </a>
@@ -312,9 +185,9 @@ const t = useTranslations(lang);
         <div class="w-1/12 spacing-block"></div>
       </div>
     </section>
-
-    <Footer lang={lang} />
   </main>
+
+  <Footer lang={lang} />
 </Layout>
 
 <script>
