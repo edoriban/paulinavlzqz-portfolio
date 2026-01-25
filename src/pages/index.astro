@@ -83,7 +83,7 @@ const t = useTranslations(lang);
                 <p
                   class="text-xs font-mono opacity-80 uppercase tracking-[0.2em] text-canvas"
                 >
-                  Rome, Italy — 2023
+                  CDMX, Mexico — 2024
                 </p>
               </div>
             </div>
@@ -337,26 +337,31 @@ const t = useTranslations(lang);
           colSpan="span 5"
           rowSpan="span 1"
           variant="primary"
-          class="p-12 md:p-16 flex flex-col justify-center relative"
+          class="p-12 md:p-16 flex flex-col justify-center relative overflow-hidden group"
         >
           <div
-            class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none hatch-pattern"
+            class="absolute top-0 left-0 w-full h-full opacity-20 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none hatch-pattern-fine"
           >
           </div>
-          <span
-            class="text-[9px] font-mono opacity-30 uppercase tracking-[0.5em] mb-10 block"
-            >Philosophy</span
-          >
-          <p
-            class="text-2xl md:text-3xl font-display italic font-light leading-tight mb-10 max-w-xl"
-          >
-            "Architecture should speak of its time and place."
-          </p>
-          <p
-            class="text-[10px] font-mono opacity-40 uppercase tracking-[0.2em]"
-          >
-            Frank Gehry
-          </p>
+          <div class="relative z-10">
+            <span
+              class="text-[9px] font-mono opacity-50 uppercase tracking-[0.3em] mb-8 block text-terracotta/80 philosophy-label"
+              >Philosophy</span
+            >
+            <p
+              class="text-2xl md:text-4xl font-display italic font-light leading-tight mb-8 max-w-2xl text-canvas/90 philosophy-quote"
+            >
+              “Architecture should speak of its time and place.”
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="h-px w-8 bg-terracotta/40 philosophy-line"></div>
+              <p
+                class="text-[10px] font-mono opacity-60 uppercase tracking-[0.2em] text-terracotta philosophy-author"
+              >
+                Frank Gehry
+              </p>
+            </div>
+          </div>
         </BentoCard>
 
         <!-- [06] DETAIL IMAGE -->
@@ -382,55 +387,107 @@ const t = useTranslations(lang);
 
         <!-- [07] OUR PROCESS -->
         <BentoCard
+          id="process"
           colSpan="span 3"
           rowSpan="span 1"
           variant="surface"
-          class="p-10 flex flex-col"
+          class="p-0 group overflow-hidden"
         >
-          <span
-            class="text-[9px] font-mono opacity-40 uppercase tracking-[0.2em] mb-10 block"
-            >Our Process</span
-          >
-          <div class="space-y-6 relative">
-            <div
-              class="absolute left-[11px] top-2 bottom-2 w-px bg-gridLine/50"
-            >
+          <div class="flex flex-col h-full">
+            <!-- Header -->
+            <div class="p-8 pb-6 border-b border-gridLine bg-[#EFEEE9]">
+              <span
+                class="text-[9px] font-mono opacity-40 uppercase tracking-[0.2em] block process-title"
+                >Our Process</span
+              >
             </div>
-            <div class="flex items-start gap-5 relative z-10">
+
+            <!-- Steps Container -->
+            <div class="flex flex-col flex-1 bg-[#FCFAF7]">
+              <!-- Step 1 -->
               <div
-                class="w-6 h-6 rounded-full border border-primary bg-white flex items-center justify-center text-[10px] font-bold shrink-0"
+                class="group/step flex-1 flex items-stretch border-b border-gridLine hover:bg-white transition-colors duration-300 cursor-default relative process-step"
               >
-                1
+                <div
+                  class="w-16 border-r border-gridLine flex items-center justify-center bg-[#EFEEE9]/30 group-hover/step:bg-primary group-hover/step:text-white transition-colors duration-300"
+                >
+                  <span class="text-[10px] font-mono tracking-widest">01</span>
+                </div>
+                <div class="flex-1 p-5 flex flex-col justify-center relative">
+                  <h4
+                    class="text-[11px] font-display font-bold uppercase tracking-[0.2em] text-primary mb-1"
+                  >
+                    Conceptualize
+                  </h4>
+                  <p
+                    class="text-[9px] font-mono opacity-50 tracking-wide max-w-[150px]"
+                  >
+                    Research & Ideation
+                  </p>
+                  <!-- Hover Arrow -->
+                  <div
+                    class="absolute right-5 top-1/2 -translate-y-1/2 opacity-0 group-hover/step:opacity-100 -translate-x-2 group-hover/step:translate-x-0 transition-all duration-300"
+                  >
+                    <ArrowRight class="w-4 h-4 text-primary" />
+                  </div>
+                </div>
               </div>
-              <p
-                class="text-[11px] font-display font-bold uppercase tracking-widest"
-              >
-                Conceptualize
-              </p>
-            </div>
-            <div class="flex items-start gap-5 relative z-10 opacity-40">
+
+              <!-- Step 2 -->
               <div
-                class="w-6 h-6 rounded-full border border-gridLine bg-white flex items-center justify-center text-[10px] font-bold shrink-0"
+                class="group/step flex-1 flex items-stretch border-b border-gridLine hover:bg-white transition-colors duration-300 cursor-default relative process-step"
               >
-                2
+                <div
+                  class="w-16 border-r border-gridLine flex items-center justify-center bg-[#EFEEE9]/30 group-hover/step:bg-primary group-hover/step:text-white transition-colors duration-300"
+                >
+                  <span class="text-[10px] font-mono tracking-widest">02</span>
+                </div>
+                <div class="flex-1 p-5 flex flex-col justify-center">
+                  <h4
+                    class="text-[11px] font-display font-bold uppercase tracking-[0.2em] text-primary mb-1"
+                  >
+                    Model
+                  </h4>
+                  <p
+                    class="text-[9px] font-mono opacity-50 tracking-wide max-w-[150px]"
+                  >
+                    Digital & Physical
+                  </p>
+                  <div
+                    class="absolute right-5 top-1/2 -translate-y-1/2 opacity-0 group-hover/step:opacity-100 -translate-x-2 group-hover/step:translate-x-0 transition-all duration-300"
+                  >
+                    <ArrowRight class="w-4 h-4 text-primary" />
+                  </div>
+                </div>
               </div>
-              <p
-                class="text-[11px] font-display font-bold uppercase tracking-widest"
-              >
-                Model
-              </p>
-            </div>
-            <div class="flex items-start gap-5 relative z-10 opacity-40">
+
+              <!-- Step 3 -->
               <div
-                class="w-6 h-6 rounded-full border border-gridLine bg-white flex items-center justify-center text-[10px] font-bold shrink-0"
+                class="group/step flex-1 flex items-stretch hover:bg-white transition-colors duration-300 cursor-default relative process-step"
               >
-                3
+                <div
+                  class="w-16 border-r border-gridLine flex items-center justify-center bg-[#EFEEE9]/30 group-hover/step:bg-primary group-hover/step:text-white transition-colors duration-300"
+                >
+                  <span class="text-[10px] font-mono tracking-widest">03</span>
+                </div>
+                <div class="flex-1 p-5 flex flex-col justify-center">
+                  <h4
+                    class="text-[11px] font-display font-bold uppercase tracking-[0.2em] text-primary mb-1"
+                  >
+                    Execute
+                  </h4>
+                  <p
+                    class="text-[9px] font-mono opacity-50 tracking-wide max-w-[150px]"
+                  >
+                    Construction & Detail
+                  </p>
+                  <div
+                    class="absolute right-5 top-1/2 -translate-y-1/2 opacity-0 group-hover/step:opacity-100 -translate-x-2 group-hover/step:translate-x-0 transition-all duration-300"
+                  >
+                    <ArrowRight class="w-4 h-4 text-primary" />
+                  </div>
+                </div>
               </div>
-              <p
-                class="text-[11px] font-display font-bold uppercase tracking-widest"
-              >
-                Execute
-              </p>
             </div>
           </div>
         </BentoCard>
@@ -517,7 +574,83 @@ const t = useTranslations(lang);
 
 <script>
   import { initAnimations } from "../utils/animations";
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
   document.addEventListener("astro:page-load", () => {
     initAnimations();
+
+    // Philosophy Component Animation
+    const philosophySection = document.getElementById("philosophy");
+    if (philosophySection) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: philosophySection,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.fromTo(
+        "#philosophy .hatch-pattern-fine",
+        { opacity: 0, scale: 1.1 },
+        { opacity: 0.2, scale: 1, duration: 1.5, ease: "power2.out" }
+      )
+        .fromTo(
+          ".philosophy-label",
+          { y: 15, opacity: 0 },
+          { y: 0, opacity: 0.5, duration: 1, ease: "power3.out" },
+          "-=1.2"
+        )
+        .fromTo(
+          ".philosophy-quote",
+          { y: 20, opacity: 0, filter: "blur(5px)" },
+          {
+            y: 0,
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 1.2,
+            ease: "power2.out",
+          },
+          "-=0.8"
+        )
+        .fromTo(
+          ".philosophy-line",
+          { width: 0, opacity: 0 },
+          { width: "2rem", opacity: 1, duration: 0.8, ease: "power2.inOut" },
+          "-=0.8"
+        )
+        .fromTo(
+          ".philosophy-author",
+          { x: -10, opacity: 0 },
+          { x: 0, opacity: 0.6, duration: 0.8, ease: "power2.out" },
+          "-=0.6"
+        );
+    }
+
+    // Process Component Animation
+    const processSection = document.getElementById("process");
+    if (processSection) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: processSection,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.fromTo(
+        ".process-title",
+        { opacity: 0, x: -10 },
+        { opacity: 0.4, x: 0, duration: 1, ease: "power2.out" }
+      ).fromTo(
+        ".process-step",
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+        "-=0.6"
+      );
+    }
   });
 </script>
