@@ -4,7 +4,7 @@ interface Props {
   colSpan?: string;
   rowSpan?: string;
   class?: string;
-  variant?: "canvas" | "primary" | "image";
+  variant?: "canvas" | "primary" | "image" | "surface";
 }
 
 const {
@@ -19,6 +19,7 @@ const variantClasses = {
   canvas: "bg-canvas text-primary",
   primary: "bg-primary text-canvas",
   image: "bg-canvas",
+  surface: "bg-[#FCFAF7] text-primary",
 };
 ---
 
@@ -38,8 +39,8 @@ const variantClasses = {
   {
     variant !== "image" && (
       <div 
-        class="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style="background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 20px 20px;"
+        class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none"
+        style="background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 24px 24px;"
       >
       </div>
     )
