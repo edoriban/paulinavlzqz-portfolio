@@ -50,7 +50,7 @@ export const ui = {
 
     // Vertex
     'vertex.title': 'Monolith Archive',
-    'vertex.location': 'Monterrey, MX',
+    'vertex.location': 'CDMX, México',
 
     // Contact Card
     'contact.title': 'Start a Project',
@@ -105,7 +105,7 @@ export const ui = {
 
     // Vertex
     'vertex.title': 'Archivo Monolito',
-    'vertex.location': 'Monterrey, MX',
+    'vertex.location': 'CDMX, México',
 
     // Contact Card
     'contact.title': 'Iniciar un Proyecto',
