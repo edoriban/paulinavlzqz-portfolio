@@ -14,9 +14,7 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-  vite: {
-    optimizeDeps: {
-      include: ['three', 'gsap', 'gsap/ScrollTrigger']
-    }
+  server: {
+    host: true
   }
 });
