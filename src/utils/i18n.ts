@@ -49,8 +49,8 @@ export const ui = {
     'philosophy.author': '— Frank Gehry',
 
     // Vertex
-    'vertex.title': 'Vertex Tower',
-    'vertex.location': 'London, UK',
+    'vertex.title': 'Monolith Archive',
+    'vertex.location': 'Monterrey, MX',
 
     // Contact Card
     'contact.title': 'Start a Project',
@@ -104,8 +104,8 @@ export const ui = {
     'philosophy.author': '— Frank Gehry',
 
     // Vertex
-    'vertex.title': 'Torre Vertex',
-    'vertex.location': 'Londres, Reino Unido',
+    'vertex.title': 'Archivo Monolito',
+    'vertex.location': 'Monterrey, MX',
 
     // Contact Card
     'contact.title': 'Iniciar un Proyecto',
