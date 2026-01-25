@@ -1,0 +1,43 @@
+---
+import { useTranslations, type Language } from '../utils/i18n';
+import { Ruler } from 'lucide-astro';
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer class="w-full border-t border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark py-12">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="col-span-1 md:col-span-2">
+      <div class="flex items-center space-x-2 mb-4">
+        <Ruler class="w-4 h-4 text-primary dark:text-white" />
+        <span class="font-display font-bold text-sm tracking-tighter text-black dark:text-white">P. VELAZQUEZ</span>
+      </div>
+      <p class="text-xs text-gray-500 max-w-xs">
+        &copy; {new Date().getFullYear()} Paulina Velazquez<br />
+        {t('footer.tagline')}
+      </p>
+    </div>
+
+    <div>
+      <h5 class="font-display text-xs font-bold text-black dark:text-white mb-4 uppercase">{t('footer.social')}</h5>
+      <ul class="space-y-2 text-xs text-gray-500">
+        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">Instagram</a></li>
+        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">LinkedIn</a></li>
+        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">Behance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 class="font-display text-xs font-bold text-black dark:text-white mb-4 uppercase">{t('footer.legal')}</h5>
+      <ul class="space-y-2 text-xs text-gray-500">
+        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">{t('footer.privacy')}</a></li>
+        <li><a class="hover:text-black dark:hover:text-white transition-colors" href="#">{t('footer.terms')}</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

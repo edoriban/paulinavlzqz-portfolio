@@ -1,0 +1,54 @@
+---
+import DomeCanvas from './DomeCanvas';
+import { useTranslations, type Language } from '../../utils/i18n';
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="w-full max-w-7xl mx-auto px-6 py-20 lg:py-32 flex flex-col md:flex-row items-center justify-between gap-12">
+  <div class="max-w-2xl">
+    <div class="flex items-center space-x-2 mb-6">
+      <div class="h-[1px] w-8 bg-black dark:bg-white"></div>
+      <span class="text-xs font-display uppercase tracking-widest text-gray-500 dark:text-gray-400">{t('hero.since')}</span>
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-light tracking-tight text-black dark:text-white mb-6 leading-[1.1]">
+      {t('hero.title.line1')} <span class="italic font-serif">{t('hero.title.form')}</span>.<br />
+      {t('hero.title.line2')} <span class="font-display font-bold">{t('hero.title.structure')}</span>.
+    </h1>
+
+    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-lg mb-10 font-light">
+      {t('hero.description')}
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+      <a
+        href="#work"
+        class="border border-black dark:border-white bg-black dark:bg-white text-white dark:text-black px-8 py-3 text-sm font-display hover:bg-transparent hover:text-black dark:hover:bg-transparent dark:hover:text-white transition-all duration-300"
+      >
+        {t('hero.cta.projects')}
+      </a>
+      <a
+        href="#contact"
+        class="border border-border-light dark:border-border-dark text-black dark:text-white px-8 py-3 text-sm font-display hover:bg-surface-light dark:hover:bg-surface-dark transition-all duration-300"
+      >
+        {t('hero.cta.contact')}
+      </a>
+    </div>
+  </div>
+
+  <div class="relative w-full md:w-1/2 aspect-square max-w-[500px] border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-1 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+    <DomeCanvas client:only="react" />
+
+    <div class="absolute bottom-4 left-4 bg-white dark:bg-black border border-border-light dark:border-border-dark px-3 py-1 z-10">
+      <p class="text-[10px] font-display uppercase tracking-widest text-black dark:text-white">{t('hero.figure')}</p>
+    </div>
+  </div>
+</section>

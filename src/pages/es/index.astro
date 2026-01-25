@@ -1,0 +1,200 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import DomeHero from '../../components/three/DomeHero.astro';
+import BentoGrid from '../../components/BentoGrid.astro';
+import BentoCard from '../../components/BentoCard.astro';
+import Footer from '../../components/Footer.astro';
+import { useTranslations } from '../../utils/i18n';
+import { Layers, TrendingUp, ArrowRight, Plus, Mail, Quote } from 'lucide-astro';
+
+const lang = 'es';
+const t = useTranslations(lang);
+---
+
+<Layout title="Paulina Velazquez | Arquitecta" lang={lang}>
+  <Nav lang={lang} />
+
+  <div class="pt-16 min-h-screen wired-grid flex flex-col items-center">
+    <DomeHero lang={lang} />
+
+    <section id="work" class="w-full max-w-7xl mx-auto px-6 pb-24">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-display text-black dark:text-white">{t('works.title')}</h2>
+        <div class="text-xs text-gray-500 font-display">{t('works.scroll')} ↓</div>
+      </div>
+
+      <BentoGrid>
+        <!-- Main Project Card -->
+        <BentoCard colSpan={2} rowSpan={2} class="group h-96 md:h-auto">
+          <img
+            alt="Dibujo arquitectónico detallado de una sección de domo"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 dark:opacity-80"
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+            <div class="border-l-2 border-white pl-4">
+              <h3 class="text-white font-display text-xl mb-1">{t('works.pantheon.title')}</h3>
+              <p class="text-gray-300 text-sm font-light">{t('works.pantheon.location')}</p>
+            </div>
+          </div>
+          <div class="absolute top-4 right-4 text-white/80 font-display text-xs border border-white/30 px-2 py-0.5 backdrop-blur-sm">
+            {t('works.pantheon.type')}
+          </div>
+        </BentoCard>
+
+        <!-- Expertise Card -->
+        <BentoCard variant="surface" class="p-6 flex flex-col justify-between hover:bg-white dark:hover:bg-background-dark transition-colors">
+          <div class="w-8 h-8 rounded-full border border-gray-400 flex items-center justify-center mb-4">
+            <Layers class="w-4 h-4" />
+          </div>
+          <div>
+            <h4 class="font-display text-sm uppercase tracking-wider text-gray-500 mb-2">{t('expertise.label')}</h4>
+            <p class="text-lg font-medium text-black dark:text-white leading-tight">{t('expertise.title')}</p>
+          </div>
+        </BentoCard>
+
+        <!-- Stats Card -->
+        <BentoCard class="p-6 flex flex-col justify-center items-center text-center">
+          <div class="absolute top-2 right-2 text-gray-300 dark:text-gray-700">
+            <TrendingUp class="w-4 h-4" />
+          </div>
+          <div class="mb-4">
+            <span class="text-5xl font-light text-black dark:text-white block">15+</span>
+            <span class="text-xs uppercase tracking-widest text-gray-500">{t('stats.years')}</span>
+          </div>
+          <div class="w-full h-px bg-gray-200 dark:bg-gray-800 my-2"></div>
+          <div>
+            <span class="text-2xl font-light text-black dark:text-white block">50+</span>
+            <span class="text-xs uppercase tracking-widest text-gray-500">{t('stats.landmarks')}</span>
+          </div>
+        </BentoCard>
+
+        <!-- Small Image Card -->
+        <BentoCard variant="image" class="group">
+          <img
+            alt="Detalle de arquitectura moderna en concreto"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale"
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
+            <ArrowRight class="w-6 h-6 text-white" />
+          </div>
+          <div class="absolute bottom-2 left-2 bg-black text-white text-[10px] px-2 py-0.5 font-display">
+            DETALLE 406
+          </div>
+        </BentoCard>
+
+        <!-- Process Card -->
+        <BentoCard variant="surface" class="p-6 flex flex-col justify-between">
+          <h4 class="font-display text-sm uppercase tracking-wider text-gray-500 mb-4">{t('process.title')}</h4>
+          <div class="space-y-3">
+            <div class="flex items-center text-xs">
+              <div class="w-4 h-4 rounded-full border border-black dark:border-white flex items-center justify-center mr-3 text-[8px]">1</div>
+              <span class="text-black dark:text-white">{t('process.step1')}</span>
+            </div>
+            <div class="w-px h-3 bg-gray-300 ml-2"></div>
+            <div class="flex items-center text-xs">
+              <div class="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center mr-3 text-[8px]">2</div>
+              <span class="text-gray-600 dark:text-gray-400">{t('process.step2')}</span>
+            </div>
+            <div class="w-px h-3 bg-gray-300 ml-2"></div>
+            <div class="flex items-center text-xs">
+              <div class="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center mr-3 text-[8px]">3</div>
+              <span class="text-gray-600 dark:text-gray-400">{t('process.step3')}</span>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- Philosophy Card -->
+        <BentoCard id="philosophy" variant="dark" colSpan={2} class="p-8 flex items-center justify-between group">
+          <div>
+            <span class="block text-gray-400 text-xs font-display mb-2">{t('philosophy.label')}</span>
+            <p class="text-lg md:text-xl font-light italic font-serif leading-relaxed">{t('philosophy.quote')}</p>
+            <span class="block text-gray-400 text-xs mt-4">{t('philosophy.author')}</span>
+          </div>
+          <div class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-4 group-hover:translate-x-0 duration-300">
+            <Quote class="w-10 h-10 text-gray-600" />
+          </div>
+        </BentoCard>
+
+        <!-- Vertex Tower Card -->
+        <BentoCard rowSpan={2} class="p-4 flex flex-col">
+          <div class="flex-grow bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden relative">
+            <img
+              alt="Boceto de estructura wireframe"
+              class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal dark:opacity-60"
+              src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&q=80"
+            />
+            <svg class="absolute inset-0 w-full h-full p-4 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+              <line class="text-blue-500/40" stroke="currentColor" stroke-width="0.2" x1="10" x2="10" y1="10" y2="90"></line>
+              <line class="text-blue-500/40" stroke="currentColor" stroke-width="0.2" x1="90" x2="90" y1="10" y2="90"></line>
+              <circle class="text-red-500/30" cx="50" cy="50" fill="none" r="30" stroke="currentColor" stroke-width="0.2"></circle>
+            </svg>
+          </div>
+          <div class="flex justify-between items-end">
+            <div>
+              <h4 class="font-display text-sm font-bold text-black dark:text-white">{t('vertex.title')}</h4>
+              <p class="text-xs text-gray-500">{t('vertex.location')}</p>
+            </div>
+            <button class="text-black dark:text-white hover:text-gray-500 transition-colors">
+              <Plus class="w-4 h-4" />
+            </button>
+          </div>
+        </BentoCard>
+
+        <!-- Contact Card -->
+        <BentoCard id="contact" variant="surface" class="p-6 flex flex-col justify-center items-center text-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center mb-3">
+            <Mail class="w-5 h-5" />
+          </div>
+          <h4 class="font-display text-sm font-bold text-black dark:text-white">{t('contact.title')}</h4>
+          <p class="text-xs text-gray-500 mt-1">{t('contact.description')}</p>
+        </BentoCard>
+      </BentoGrid>
+    </section>
+
+    <Footer lang={lang} />
+  </div>
+</Layout>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  function initAnimations() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const cards = document.querySelectorAll('.bento-card');
+    if (cards.length === 0) return;
+
+    gsap.from(cards, {
+      scrollTrigger: {
+        trigger: cards[0].closest('.grid') || cards[0],
+        start: 'top 85%',
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'power2.out',
+    });
+
+    // Hero text animation
+    const heroTitle = document.querySelector('h1');
+    if (heroTitle) {
+      gsap.from(heroTitle, {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+      });
+    }
+  }
+
+  initAnimations();
+  document.addEventListener('astro:page-load', initAnimations);
+</script>

@@ -1,0 +1,42 @@
+---
+interface Props {
+  colSpan?: 1 | 2 | 3 | 4;
+  rowSpan?: 1 | 2 | 3;
+  class?: string;
+  variant?: 'default' | 'dark' | 'surface' | 'image';
+}
+
+const { colSpan = 1, rowSpan = 1, class: className, variant = 'default' } = Astro.props;
+
+const colSpanClasses = {
+  1: 'md:col-span-1',
+  2: 'md:col-span-2',
+  3: 'md:col-span-3',
+  4: 'md:col-span-4',
+};
+
+const rowSpanClasses = {
+  1: 'md:row-span-1',
+  2: 'md:row-span-2',
+  3: 'md:row-span-3',
+};
+
+const variantClasses = {
+  default: 'bg-background-light dark:bg-background-dark',
+  dark: 'bg-primary text-white',
+  surface: 'bg-surface-light dark:bg-surface-dark',
+  image: 'bg-white dark:bg-black',
+};
+---
+
+<div
+  class:list={[
+    'bento-card relative overflow-hidden',
+    colSpanClasses[colSpan],
+    rowSpanClasses[rowSpan],
+    variantClasses[variant],
+    className,
+  ]}
+>
+  <slot />
+</div>
