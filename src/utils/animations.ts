@@ -30,6 +30,44 @@ export function initAnimations() {
     });
   }
 
+  // Quote card animation
+  const quoteCard = document.querySelector(".quote-card");
+  if (quoteCard) {
+    const quoteText = quoteCard.querySelector("p");
+    const quoteIcon = quoteCard.querySelector("svg");
+    const authorLine = quoteCard.querySelector(".bg-primary\\/20");
+    
+    quoteCard.addEventListener("mouseenter", () => {
+      gsap.to(quoteText, {
+        x: 5,
+        color: "#1A1A1A",
+        duration: 0.8,
+        ease: "power2.out"
+      });
+      gsap.to(quoteIcon, {
+        scale: 1.1,
+        opacity: 0.4,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+    
+    quoteCard.addEventListener("mouseleave", () => {
+      gsap.to(quoteText, {
+        x: 0,
+        color: "rgba(26, 26, 26, 0.8)",
+        duration: 0.8,
+        ease: "power2.inOut"
+      });
+      gsap.to(quoteIcon, {
+        scale: 1,
+        opacity: 0.2,
+        duration: 0.8,
+        ease: "power2.inOut"
+      });
+    });
+  }
+
   // Hero text animation
   const heroTitle = document.querySelector("h1");
   if (heroTitle) {
