@@ -1,6 +1,5 @@
 ---
 import { useTranslations, type Language } from "../utils/i18n";
-// import { Ruler } from "lucide-astro";
 
 interface Props {
   lang: Language;
@@ -10,78 +9,107 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<footer class="w-full grid-line-h bg-canvas py-16 md:py-24">
-  <div class="flex w-full min-h-[20vh]">
-    <!-- Technical Block -->
-    <div
-      class="w-1/12 grid-line-v flex items-center justify-center spacing-block"
-    >
-      <span class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40"
-        >FOOTER.01</span
-      >
+<footer class="w-full">
+    <!-- Horizontal Separation Spacer with vertical grid lines -->
+    <div class="w-full grid-line-h h-12 flex">
+        <div class="w-1/12 grid-line-v spacing-block"></div>
+        <div class="w-10/12 grid-line-v spacing-block"></div>
+        <div class="w-1/12 spacing-block"></div>
     </div>
 
-    <!-- Footer Content -->
-    <div
-      class="flex-1 px-12 md:px-16 grid grid-cols-1 md:grid-cols-4 gap-12 items-start"
-    >
-      <div class="col-span-1 md:col-span-2">
-        <div class="flex items-center space-x-2 mb-6">
-          <span class="font-display font-bold text-xl tracking-tight uppercase"
-            >Paulina Velazquez</span
-          >
+    <!-- Footer Main Row -->
+    <div class="flex w-full grid-line-h">
+        <!-- Left Spacing Block (1/12) -->
+        <div
+            class="w-1/12 grid-line-v flex items-center justify-center spacing-block"
+        >
+            <span
+                class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40"
+                >FOOTER.01</span
+            >
         </div>
-        <p
-          class="text-[10px] text-primary/60 font-mono tracking-widest uppercase leading-loose"
-        >
-          &copy; {new Date().getFullYear()} Paulina Velazquez<br />
-          {t("footer.tagline")}
-        </p>
-      </div>
 
-      <div>
-        <h5
-          class="font-display text-[11px] font-bold text-primary mb-6 uppercase tracking-widest"
+        <!-- Footer Content (10/12) -->
+        <div
+            class="w-10/12 grid-line-v px-12 md:px-20 py-16 md:py-20 bg-canvas"
         >
-          {t("footer.social")}
-        </h5>
-        <ul
-          class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
-        >
-          <li>
-            <a class="hover:text-primary transition-colors uppercase" href="#"
-              >Instagram</a>
-          </li>
-          <li>
-            <a class="hover:text-primary transition-colors uppercase" href="#"
-              >LinkedIn</a>
-          </li>
-          <li>
-            <a class="hover:text-primary transition-colors uppercase" href="#"
-              >Behance</a>
-          </li>
-        </ul>
-      </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <span class="font-display font-bold text-xl tracking-tight uppercase block mb-6"
+                        >Paulina Velazquez</span
+                    >
+                    <p
+                        class="text-[10px] text-primary/60 font-mono tracking-widest uppercase leading-loose"
+                    >
+                        {t("footer.tagline")}
+                    </p>
+                </div>
 
-      <div>
-        <h5
-          class="font-display text-[11px] font-bold text-primary mb-6 uppercase tracking-widest"
-        >
-          {t("footer.legal")}
-        </h5>
-        <ul
-          class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
-        >
-          <li>
-            <a class="hover:text-primary transition-colors uppercase" href="#"
-              >{t("footer.privacy")}</a>
-          </li>
-          <li>
-            <a class="hover:text-primary transition-colors uppercase" href="#"
-              >{t("footer.terms")}</a>
-          </li>
-        </ul>
-      </div>
+                <!-- Social -->
+                <div>
+                    <h5
+                        class="font-display text-[11px] font-bold text-primary mb-6 uppercase tracking-widest"
+                    >
+                        {t("footer.social")}
+                    </h5>
+                    <ul
+                        class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
+                    >
+                        <li>
+                            <a class="hover:text-primary transition-colors uppercase" href="#">Instagram</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary transition-colors uppercase" href="#">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary transition-colors uppercase" href="#">Behance</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h5
+                        class="font-display text-[11px] font-bold text-primary mb-6 uppercase tracking-widest"
+                    >
+                        {t("footer.legal")}
+                    </h5>
+                    <ul
+                        class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
+                    >
+                        <li>
+                            <a class="hover:text-primary transition-colors uppercase" href="#">{t("footer.privacy")}</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-primary transition-colors uppercase" href="#">{t("footer.terms")}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Spacing Block (1/12) -->
+        <div class="w-1/12 spacing-block"></div>
     </div>
-  </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="flex w-full">
+        <div class="w-1/12 grid-line-v spacing-block h-12"></div>
+        <div class="w-10/12 grid-line-v h-12 flex items-center px-12 md:px-20">
+            <span class="text-[9px] text-primary/40 font-mono tracking-widest uppercase"
+                >&copy; {new Date().getFullYear()} Paulina Velazquez</span
+            >
+        </div>
+        <div class="w-1/12 spacing-block h-12"></div>
+    </div>
 </footer>
+
+<style>
+    .grid-line-h {
+        border-bottom: 1px solid var(--grid-line);
+    }
+    .grid-line-v {
+        border-right: 1px solid var(--grid-line);
+    }
+</style>
