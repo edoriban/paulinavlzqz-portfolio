@@ -11,7 +11,7 @@ const t = useTranslations(lang);
 
 <footer class="w-full">
     <!-- Horizontal Separation Spacer with vertical grid lines -->
-    <div class="w-full grid-line-h h-12 flex">
+    <div class="w-full grid-line-h h-12 hidden md:flex">
         <div class="w-1/12 grid-line-v spacing-block"></div>
         <div class="w-10/12 grid-line-v spacing-block"></div>
         <div class="w-1/12 spacing-block"></div>
@@ -21,7 +21,7 @@ const t = useTranslations(lang);
     <div class="flex w-full grid-line-h">
         <!-- Left Spacing Block (1/12) -->
         <div
-            class="w-1/12 grid-line-v flex items-center justify-center spacing-block"
+            class="hidden md:flex w-1/12 grid-line-v items-center justify-center spacing-block"
         >
             <span
                 class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40"
@@ -31,7 +31,7 @@ const t = useTranslations(lang);
 
         <!-- Footer Content (10/12) -->
         <div
-            class="w-10/12 grid-line-v px-12 md:px-20 py-16 md:py-20 bg-canvas"
+            class="w-full md:w-10/12 grid-line-v px-6 md:px-20 py-12 md:py-20 bg-canvas"
         >
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
                 <!-- Brand -->
@@ -90,18 +90,18 @@ const t = useTranslations(lang);
         </div>
 
         <!-- Right Spacing Block (1/12) -->
-        <div class="w-1/12 spacing-block"></div>
+        <div class="hidden md:block w-1/12 spacing-block"></div>
     </div>
 
     <!-- Bottom Copyright Bar -->
     <div class="flex w-full">
-        <div class="w-1/12 grid-line-v spacing-block h-12"></div>
-        <div class="w-10/12 grid-line-v h-12 flex items-center px-12 md:px-20">
+        <div class="hidden md:block w-1/12 grid-line-v spacing-block h-12"></div>
+        <div class="w-full md:w-10/12 grid-line-v h-12 flex items-center px-6 md:px-20">
             <span class="text-[9px] text-primary/40 font-mono tracking-widest uppercase"
                 >&copy; {new Date().getFullYear()} Paulina Velazquez</span
             >
         </div>
-        <div class="w-1/12 spacing-block h-12"></div>
+        <div class="hidden md:block w-1/12 spacing-block h-12"></div>
     </div>
 </footer>
 

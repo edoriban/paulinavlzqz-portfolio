@@ -22,22 +22,22 @@ const t = useTranslations(lang);
     <section id="work" class="w-full border-t border-gridLine">
       <!-- Section Header aligned to grid -->
       <div class="w-full grid-line-h h-14 flex bg-[#EFEEE9]">
-        <div class="w-1/12 grid-line-v spacing-block"></div>
-        <div class="w-7/12 grid-line-v px-12 md:px-20 flex items-center">
+        <div class="hidden md:block w-1/12 grid-line-v spacing-block"></div>
+        <div class="flex-1 md:w-7/12 md:flex-none grid-line-v px-6 md:px-20 flex items-center">
           <h2
             class="font-display text-[11px] font-bold tracking-[0.4em] uppercase opacity-60 text-primary"
           >
             {t("works.title")}
           </h2>
         </div>
-        <div class="w-3/12 grid-line-v spacing-block"></div>
-        <div class="w-1/12 spacing-block"></div>
+        <div class="hidden md:block w-3/12 grid-line-v spacing-block"></div>
+        <div class="hidden md:block w-1/12 spacing-block"></div>
       </div>
 
       <BentoGrid class="w-full">
         <!-- [00] SIDEBAR LEFT -->
         <div
-          class="col-span-1 row-span-4 grid-line-v spacing-block flex items-center justify-center relative min-h-[1000px]"
+          class="hidden md:flex col-span-1 row-span-4 grid-line-v spacing-block items-center justify-center relative min-h-[1000px]"
         >
           <span
             class="text-[10px] font-mono rotate-90 whitespace-nowrap opacity-40 uppercase block"
@@ -154,7 +154,7 @@ const t = useTranslations(lang);
         </BentoCard>
 
         <!-- [03] SIDEBAR RIGHT -->
-        <div class="col-span-1 row-span-4 spacing-block"></div>
+        <div class="hidden md:block col-span-1 row-span-4 spacing-block"></div>
 
         <!-- [04] DOME VISUAL -->
         <BentoCard

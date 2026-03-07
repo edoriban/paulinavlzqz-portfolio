@@ -43,7 +43,7 @@ const t = useTranslations(lang);
     <div class="flex w-full">
         <!-- Left Spacing Block (1/12) -->
         <div
-            class="w-1/12 border-r border-white/[0.07] flex items-center justify-center spacing-block"
+            class="hidden md:flex w-1/12 border-r border-white/[0.07] items-center justify-center spacing-block"
         >
             <span
                 class="text-[10px] font-mono rotate-90 whitespace-nowrap text-[#F9E4D4]/20"
@@ -53,10 +53,10 @@ const t = useTranslations(lang);
 
         <!-- CTA Content (10/12) -->
         <div
-            class="w-10/12 border-r border-white/[0.07] py-24 md:py-32 px-12 md:px-20 relative z-10"
+            class="w-full md:w-10/12 border-r border-white/[0.07] py-16 md:py-32 px-6 md:px-20 relative z-10"
         >
             <!-- Top meta row -->
-            <div class="flex items-center justify-between mb-20">
+            <div class="flex items-center justify-between mb-12 md:mb-20">
                 <div class="flex items-center gap-3">
                     <div class="w-2 h-2 bg-[#E2F0E9] rounded-full animate-pulse"></div>
                     <span class="text-[10px] font-mono text-[#F9E4D4]/40 uppercase tracking-[0.3em]"
@@ -86,7 +86,7 @@ const t = useTranslations(lang);
                 <!-- Email button -->
                 <a
                     href="mailto:paulina@velazquez.com"
-                    class="group/btn inline-flex items-center gap-4 border border-[#F9E4D4]/20 hover:border-[#F9E4D4]/50 hover:bg-[#F9E4D4]/5 px-10 py-5 transition-all duration-500"
+                    class="group/btn inline-flex items-center gap-3 md:gap-4 border border-[#F9E4D4]/20 hover:border-[#F9E4D4]/50 hover:bg-[#F9E4D4]/5 px-6 md:px-10 py-4 md:py-5 transition-all duration-500"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@ const t = useTranslations(lang);
             </div>
 
             <!-- Bottom meta row -->
-            <div class="flex items-center justify-between mt-20">
+            <div class="flex items-center justify-between mt-12 md:mt-20">
                 <div class="flex items-center gap-6">
                     <div class="h-px w-12 bg-[#F9E4D4]/10"></div>
                     <span class="text-[9px] font-mono text-[#F9E4D4]/20 uppercase tracking-widest"
@@ -142,6 +142,6 @@ const t = useTranslations(lang);
         </div>
 
         <!-- Right Spacing Block (1/12) -->
-        <div class="w-1/12 spacing-block"></div>
+        <div class="hidden md:block w-1/12 spacing-block"></div>
     </div>
 </section>

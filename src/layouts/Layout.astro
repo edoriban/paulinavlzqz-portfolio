@@ -93,6 +93,13 @@ const {
         opacity: 0.3;
       }
 
+      @media (max-width: 767px) {
+        .bento-card {
+          grid-column: 1 / -1 !important;
+          grid-row: span 1 !important;
+        }
+      }
+
       .material-symbols-outlined {
         font-variation-settings:
           "FILL" 0,

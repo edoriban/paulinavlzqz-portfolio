@@ -19,7 +19,7 @@ const otherLangUrl = lang === "en" ? "/es/" : "/";
   <div class="flex w-full">
     <!-- Technical Block -->
     <div
-      class="w-1/12 grid-line-v h-20 flex items-center justify-center bg-[#EFEEE9] spacing-block-solid"
+      class="hidden md:flex w-1/12 grid-line-v h-20 items-center justify-center bg-[#EFEEE9] spacing-block-solid"
     >
       <span class="text-[10px] font-mono rotate-90 whitespace-nowrap"
         >NAV.01</span
@@ -30,7 +30,7 @@ const otherLangUrl = lang === "en" ? "/es/" : "/";
     <div class="flex-1 grid-line-v flex items-center">
       <a
         href={lang === "en" ? "/" : "/es/"}
-        class="px-6 md:px-12 font-display font-bold text-xl tracking-tight uppercase whitespace-nowrap"
+        class="px-4 md:px-12 font-display font-bold text-base md:text-xl tracking-tight uppercase whitespace-nowrap"
       >
         Paulina Velazquez
       </a>
