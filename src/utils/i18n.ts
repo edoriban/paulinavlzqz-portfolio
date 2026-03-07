@@ -56,6 +56,15 @@ export const ui = {
     'contact.title': 'Start a Project',
     'contact.description': 'We are currently accepting new commissions.',
 
+    // CTA
+    'cta.label': 'Open for Commissions',
+    'cta.title.line1': "Let's Build",
+    'cta.title.line2': 'Something',
+    'cta.title.line3': 'Remarkable.',
+    'cta.description': 'Every great structure begins with a conversation. Share your vision and let architecture do the rest.',
+    'cta.button': 'Send an Email',
+    'cta.coord': '19.4326° N, 99.1332° W',
+
     // Footer
     'footer.social': 'Social',
     'footer.legal': 'Legal',
@@ -110,6 +119,15 @@ export const ui = {
     // Contact Card
     'contact.title': 'Iniciar un Proyecto',
     'contact.description': 'Actualmente aceptamos nuevos encargos.',
+
+    // CTA
+    'cta.label': 'Abierta a Proyectos',
+    'cta.title.line1': 'Construyamos',
+    'cta.title.line2': 'Algo',
+    'cta.title.line3': 'Extraordinario.',
+    'cta.description': 'Toda gran estructura comienza con una conversación. Comparte tu visión y deja que la arquitectura haga el resto.',
+    'cta.button': 'Enviar un Email',
+    'cta.coord': '19.4326° N, 99.1332° W',
 
     // Footer
     'footer.social': 'Redes',
