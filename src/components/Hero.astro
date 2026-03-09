@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { useTranslations, type Language } from "../utils/i18n";
+import sagrarioHero from "../assets/images/sagrario-hero.png";
 
 interface Props {
     lang: Language;
@@ -110,10 +112,12 @@ const t = useTranslations(lang);
                 </svg>
             </div>
 
-            <img
-                src="/images/sagrario-hero.png"
-                alt="Technical architectural drawing"
+            <Image
+                src={sagrarioHero}
+                alt="Technical architectural drawing of Sagrario Metropolitano dome structure"
                 class="relative z-10 w-[90%] h-auto grayscale mix-blend-multiply opacity-90"
+                widths={[320, 640]}
+                sizes="25vw"
             />
 
             <!-- Technical Decorative Block -->
