@@ -79,6 +79,9 @@ export const ui = {
     'cta.button': 'Send an Email',
     'cta.coord': '19.4326° N, 99.1332° W',
 
+    // Meta
+    'meta.description': 'Paulina Velazquez — Architect specializing in computational design and structural analysis. Based in Mexico City.',
+
     // Footer
     'footer.social': 'Social',
     'footer.legal': 'Legal',
@@ -156,6 +159,9 @@ export const ui = {
     'cta.description': 'Toda gran estructura comienza con una conversación. Comparte tu visión y deja que la arquitectura haga el resto.',
     'cta.button': 'Enviar un Email',
     'cta.coord': '19.4326° N, 99.1332° W',
+
+    // Meta
+    'meta.description': 'Paulina Velazquez — Arquitecta especializada en diseño computacional y análisis estructural. Con sede en Ciudad de México.',
 
     // Footer
     'footer.social': 'Redes',

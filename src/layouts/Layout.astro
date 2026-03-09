@@ -1,19 +1,54 @@
 ---
 import "../styles/global.css";
 import type { Language } from "../utils/i18n";
+import { getAlternateUrl } from "../utils/i18n";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
   lang?: Language;
   description?: string;
+  image?: string;
 }
 
 const {
   title,
   lang = "en",
   description = "Paulina Velazquez - Architect Portfolio",
+  image,
 } = Astro.props;
+
+const canonicalUrl = Astro.url.href;
+const siteUrl = Astro.site?.origin ?? "https://paulinavlzqz.vercel.app";
+const ogImage = image ? new URL(image, siteUrl).href : `${siteUrl}/og-image.png`;
+
+const currentPath = Astro.url.pathname;
+const alternatePath = getAlternateUrl(currentPath, lang);
+const enUrl = lang === "en" ? canonicalUrl : `${siteUrl}${alternatePath}`;
+const esUrl = lang === "es" ? canonicalUrl : `${siteUrl}${alternatePath}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      name: "Paulina Velazquez",
+      jobTitle: lang === "es" ? "Arquitecta" : "Architect",
+      url: siteUrl,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: lang === "es" ? "Ciudad de México" : "Mexico City",
+        addressCountry: "MX",
+      },
+    },
+    {
+      "@type": "WebSite",
+      url: siteUrl,
+      name: "Paulina Velazquez Portfolio",
+      inLanguage: [lang === "es" ? "es-MX" : "en-US"],
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -24,7 +59,32 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#f5f4f0" />
     <title>{title}</title>
+
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === "es" ? "es_MX" : "en_US"} />
+    <meta property="og:locale:alternate" content={lang === "es" ? "en_US" : "es_MX"} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
