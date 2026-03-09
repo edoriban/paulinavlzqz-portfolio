@@ -25,9 +25,9 @@ export const ui = {
     // Selected Works
     'works.title': 'SELECTED WORKS',
     'works.scroll': 'SCROLL FOR MORE',
-    'works.pantheon.title': 'Pantheon Revival',
-    'works.pantheon.location': 'Rome, Italy — 2023',
-    'works.pantheon.type': 'TYPE A1 : r/e: 43',
+    'works.pantheon.title': 'Sagrario Metropolitano',
+    'works.pantheon.location': 'CDMX, Mexico — 2024',
+    'works.pantheon.type': 'Dome · Structural Analysis',
 
     // Expertise
     'expertise.label': 'Expertise',
@@ -49,8 +49,22 @@ export const ui = {
     'philosophy.author': '— Frank Gehry',
 
     // Vertex
-    'vertex.title': 'Monolith Archive',
+    'vertex.title': 'Sagrario — Dome Studies',
     'vertex.location': 'CDMX, México',
+
+    // Grid Availability Card
+    'grid.status.label': 'Status',
+    'grid.status.value': 'Available for Projects',
+    'grid.location.value': 'Mexico City, MX',
+    'grid.scope': 'Scope',
+    'grid.scope.value': 'Residential · Commercial · Cultural · Consulting',
+    'grid.reply': 'Reply',
+    'grid.reply.value': 'Within 24h',
+    'grid.slots': 'Open',
+    'grid.slots.value': '2 / 3 Slots Available',
+    'grid.exp': 'Exp.',
+    'grid.exp.value': 'Est. 2019 · 5+ Years',
+    'grid.cta': 'Get in Touch',
 
     // Contact Card
     'contact.title': 'Start a Project',
@@ -89,9 +103,9 @@ export const ui = {
     // Selected Works
     'works.title': 'TRABAJOS SELECCIONADOS',
     'works.scroll': 'DESPLAZA PARA MÁS',
-    'works.pantheon.title': 'Renacimiento del Panteón',
-    'works.pantheon.location': 'Roma, Italia — 2023',
-    'works.pantheon.type': 'TIPO A1 : r/e: 43',
+    'works.pantheon.title': 'Sagrario Metropolitano',
+    'works.pantheon.location': 'CDMX, México — 2024',
+    'works.pantheon.type': 'Cúpula · Análisis Estructural',
 
     // Expertise
     'expertise.label': 'Especialidad',
@@ -113,8 +127,22 @@ export const ui = {
     'philosophy.author': '— Frank Gehry',
 
     // Vertex
-    'vertex.title': 'Archivo Monolito',
+    'vertex.title': 'Sagrario — Estudios de Cúpula',
     'vertex.location': 'CDMX, México',
+
+    // Grid Availability Card
+    'grid.status.label': 'Estado',
+    'grid.status.value': 'Disponible para Proyectos',
+    'grid.location.value': 'Ciudad de México, MX',
+    'grid.scope': 'Área',
+    'grid.scope.value': 'Residencial · Comercial · Cultural · Consultoría',
+    'grid.reply': 'Resp.',
+    'grid.reply.value': 'En menos de 24h',
+    'grid.slots': 'Disp.',
+    'grid.slots.value': '2 / 3 Espacios Libres',
+    'grid.exp': 'Exp.',
+    'grid.exp.value': 'Est. 2019 · 5+ Años',
+    'grid.cta': 'Contáctame',
 
     // Contact Card
     'contact.title': 'Iniciar un Proyecto',
