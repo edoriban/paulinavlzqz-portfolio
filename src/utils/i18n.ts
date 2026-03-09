@@ -15,11 +15,11 @@ export const ui = {
     'nav.contact': 'CONTACT',
 
     // Hero
-    'hero.label': 'Architectural Practice 2024',
-    'hero.title.part1': 'Defining Space.',
-    'hero.title.part2': 'Refined by',
-    'hero.title.part2.italic': 'Logic.',
-    'hero.description': 'A synthesis of brutalist honesty and technical precision. We craft structures that stand as monuments to functional clarity.',
+    'hero.label': 'Historic Structural Analysis',
+    'hero.title.part1': 'Preserving Heritage.',
+    'hero.title.part2': 'Guided by',
+    'hero.title.part2.italic': 'Analysis.',
+    'hero.description': 'Analyzing historic constructions through graphic and arithmetic methods to determine alternatives for conservation and restoration.',
     'hero.cta.view': 'View Portfolio',
 
     // Selected Works
@@ -27,26 +27,26 @@ export const ui = {
     'works.scroll': 'SCROLL FOR MORE',
     'works.pantheon.title': 'Sagrario Metropolitano',
     'works.pantheon.location': 'CDMX, Mexico — 2024',
-    'works.pantheon.type': 'Dome · Structural Analysis',
+    'works.pantheon.type': 'Dome · Conservation Analysis',
 
     // Expertise
     'expertise.label': 'Expertise',
-    'expertise.title': 'Computational Design & Engineering',
+    'expertise.title': 'Historic Structural Analysis & Conservation',
 
     // Stats
     'stats.years': 'Years Experience',
-    'stats.landmarks': 'Landmarks',
+    'stats.landmarks': 'Historic Buildings',
 
     // Process
-    'process.title': 'Our Process',
-    'process.step1': 'Conceptualize',
-    'process.step2': 'Model',
-    'process.step3': 'Execute',
+    'process.title': 'My Process',
+    'process.step1': 'Research',
+    'process.step2': 'Analyze',
+    'process.step3': 'Conserve',
 
     // Philosophy
     'philosophy.label': 'PHILOSOPHY',
-    'philosophy.quote': '"Architecture should speak of its time and place, but yearn for timelessness."',
-    'philosophy.author': '— Frank Gehry',
+    'philosophy.quote': '"Restoration should reveal the historical and aesthetic value of a monument, based on respect for the original."',
+    'philosophy.author': '— Venice Charter, 1964',
 
     // Vertex
     'vertex.title': 'Sagrario — Dome Studies',
@@ -57,7 +57,7 @@ export const ui = {
     'grid.status.value': 'Available for Projects',
     'grid.location.value': 'Mexico City, MX',
     'grid.scope': 'Scope',
-    'grid.scope.value': 'Residential · Commercial · Cultural · Consulting',
+    'grid.scope.value': 'Heritage · Conservation · Restoration · Lightweight Structures',
     'grid.reply': 'Reply',
     'grid.reply.value': 'Within 24h',
     'grid.slots': 'Open',
@@ -68,26 +68,26 @@ export const ui = {
 
     // Contact Card
     'contact.title': 'Start a Project',
-    'contact.description': 'We are currently accepting new commissions.',
+    'contact.description': 'Currently accepting new conservation and analysis projects.',
 
     // CTA
-    'cta.label': 'Open for Commissions',
-    'cta.title.line1': "Let's Build",
+    'cta.label': 'Open for Projects',
+    'cta.title.line1': "Let's Preserve",
     'cta.title.line2': 'Something',
-    'cta.title.line3': 'Remarkable.',
-    'cta.description': 'Every great structure begins with a conversation. Share your vision and let architecture do the rest.',
+    'cta.title.line3': 'Timeless.',
+    'cta.description': 'Every historic structure tells a story. Share your project and we will work together to preserve it.',
     'cta.button': 'Send an Email',
     'cta.coord': '19.4326° N, 99.1332° W',
 
     // Meta
-    'meta.description': 'Paulina Velazquez — Architect specializing in computational design and structural analysis. Based in Mexico City.',
+    'meta.description': 'Paulina Velazquez — Architect specializing in historic structural analysis, conservation and restoration. Based in Mexico City.',
 
     // Footer
     'footer.social': 'Social',
     'footer.legal': 'Legal',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
-    'footer.tagline': 'Designing the future, one precision line at a time.',
+    'footer.tagline': 'Preserving the past, one careful analysis at a time.',
   },
   es: {
     // Nav
@@ -96,11 +96,11 @@ export const ui = {
     'nav.contact': 'CONTACTO',
 
     // Hero
-    'hero.label': 'Práctica Arquitectónica 2024',
-    'hero.title.part1': 'Espacio Definido.',
-    'hero.title.part2': 'Refinado por la',
-    'hero.title.part2.italic': 'Lógica.',
-    'hero.description': 'Una síntesis de honestidad brutalista y precisión técnica. Creamos estructuras que se erigen como monumentos a la claridad funcional.',
+    'hero.label': 'Análisis Estructural Histórico',
+    'hero.title.part1': 'Preservar el Patrimonio.',
+    'hero.title.part2': 'Guiado por el',
+    'hero.title.part2.italic': 'Análisis.',
+    'hero.description': 'Análisis de construcciones históricas mediante métodos gráficos y aritméticos para determinar alternativas de conservación y restauración.',
     'hero.cta.view': 'Ver Portafolio',
 
     // Selected Works
@@ -108,26 +108,26 @@ export const ui = {
     'works.scroll': 'DESPLAZA PARA MÁS',
     'works.pantheon.title': 'Sagrario Metropolitano',
     'works.pantheon.location': 'CDMX, México — 2024',
-    'works.pantheon.type': 'Cúpula · Análisis Estructural',
+    'works.pantheon.type': 'Cúpula · Análisis de Conservación',
 
     // Expertise
     'expertise.label': 'Especialidad',
-    'expertise.title': 'Diseño Computacional e Ingeniería',
+    'expertise.title': 'Análisis Estructural Histórico y Conservación',
 
     // Stats
     'stats.years': 'Años de Experiencia',
-    'stats.landmarks': 'Edificios Icónicos',
+    'stats.landmarks': 'Edificios Históricos',
 
     // Process
-    'process.title': 'Nuestro Proceso',
-    'process.step1': 'Conceptualizar',
-    'process.step2': 'Modelar',
-    'process.step3': 'Ejecutar',
+    'process.title': 'Mi Proceso',
+    'process.step1': 'Investigar',
+    'process.step2': 'Analizar',
+    'process.step3': 'Conservar',
 
     // Philosophy
     'philosophy.label': 'FILOSOFÍA',
-    'philosophy.quote': '"La arquitectura debe hablar de su tiempo y lugar, pero anhelar la atemporalidad."',
-    'philosophy.author': '— Frank Gehry',
+    'philosophy.quote': '"La restauración debe revelar el valor histórico y estético del monumento, basándose en el respeto al original."',
+    'philosophy.author': '— Carta de Venecia, 1964',
 
     // Vertex
     'vertex.title': 'Sagrario — Estudios de Cúpula',
@@ -138,7 +138,7 @@ export const ui = {
     'grid.status.value': 'Disponible para Proyectos',
     'grid.location.value': 'Ciudad de México, MX',
     'grid.scope': 'Área',
-    'grid.scope.value': 'Residencial · Comercial · Cultural · Consultoría',
+    'grid.scope.value': 'Patrimonio · Conservación · Restauración · Estructuras Ligeras',
     'grid.reply': 'Resp.',
     'grid.reply.value': 'En menos de 24h',
     'grid.slots': 'Disp.',
@@ -149,26 +149,26 @@ export const ui = {
 
     // Contact Card
     'contact.title': 'Iniciar un Proyecto',
-    'contact.description': 'Actualmente aceptamos nuevos encargos.',
+    'contact.description': 'Actualmente acepto nuevos proyectos de conservación y análisis.',
 
     // CTA
     'cta.label': 'Abierta a Proyectos',
-    'cta.title.line1': 'Construyamos',
+    'cta.title.line1': 'Preservemos',
     'cta.title.line2': 'Algo',
-    'cta.title.line3': 'Extraordinario.',
-    'cta.description': 'Toda gran estructura comienza con una conversación. Comparte tu visión y deja que la arquitectura haga el resto.',
+    'cta.title.line3': 'Atemporal.',
+    'cta.description': 'Cada estructura histórica cuenta una historia. Comparte tu proyecto y trabajemos juntos para preservarla.',
     'cta.button': 'Enviar un Email',
     'cta.coord': '19.4326° N, 99.1332° W',
 
     // Meta
-    'meta.description': 'Paulina Velazquez — Arquitecta especializada en diseño computacional y análisis estructural. Con sede en Ciudad de México.',
+    'meta.description': 'Paulina Velazquez — Arquitecta especializada en análisis estructural histórico, conservación y restauración. Con sede en Ciudad de México.',
 
     // Footer
     'footer.social': 'Redes',
     'footer.legal': 'Legal',
     'footer.privacy': 'Política de Privacidad',
     'footer.terms': 'Términos de Servicio',
-    'footer.tagline': 'Diseñando el futuro, una línea de precisión a la vez.',
+    'footer.tagline': 'Preservando el pasado, un análisis cuidadoso a la vez.',
   },
 } as const;
 
