@@ -26,8 +26,8 @@ const otherLangUrl = lang === "en" ? "/es/" : "/";
       >
     </div>
 
-    <!-- Main Navigation Content -->
-    <div class="flex-1 grid-line-v flex items-center">
+    <!-- Main Navigation Content (10/12) -->
+    <div class="w-full md:w-10/12 grid-line-v flex items-center">
       <a
         href={lang === "en" ? "/" : "/es/"}
         class="px-4 md:px-12 font-display font-bold text-base md:text-xl tracking-tight uppercase whitespace-nowrap"
@@ -45,10 +45,6 @@ const otherLangUrl = lang === "en" ? "/es/" : "/";
         <a
           class="hover:opacity-60 transition-opacity uppercase tracking-widest text-xs"
           href="#work">{t("nav.work")}</a
-        >
-        <a
-          class="hover:opacity-60 transition-opacity uppercase tracking-widest text-xs"
-          href="#philosophy">{t("nav.philosophy")}</a
         >
 
         <div class="flex gap-2 text-primary/40 font-mono text-xs">
@@ -83,13 +79,13 @@ const otherLangUrl = lang === "en" ? "/es/" : "/";
       </div>
     </div>
 
-    <!-- Contact Button Block -->
+    <!-- Contact Button Block (1/12) -->
     <div
-      class="shrink-0 h-20 flex items-center justify-center px-3 md:px-8"
+      class="w-1/12 h-20 hidden md:flex items-center justify-center"
     >
       <a
         href="#contact"
-        class="bg-primary text-white border border-primary px-4 md:px-6 py-2 hover:opacity-90 transition-all text-[10px] md:text-sm font-bold text-center uppercase tracking-widest whitespace-nowrap"
+        class="bg-primary text-white border border-primary px-3 lg:px-5 py-2 hover:opacity-90 transition-all text-[9px] lg:text-[10px] font-bold text-center uppercase tracking-widest whitespace-nowrap"
       >
         {t("nav.contact")}
       </a>
