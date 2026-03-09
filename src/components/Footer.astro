@@ -79,10 +79,10 @@ const t = useTranslations(lang);
                         class="space-y-3 text-[11px] text-primary/60 font-mono tracking-wider"
                     >
                         <li>
-                            <a class="hover:text-primary transition-colors uppercase" href="#">{t("footer.privacy")}</a>
+                            <a class="hover:text-primary transition-colors uppercase" href={lang === "es" ? "/es/privacidad" : "/privacy"}>{t("footer.privacy")}</a>
                         </li>
                         <li>
-                            <a class="hover:text-primary transition-colors uppercase" href="#">{t("footer.terms")}</a>
+                            <a class="hover:text-primary transition-colors uppercase" href={lang === "es" ? "/es/terminos" : "/terms"}>{t("footer.terms")}</a>
                         </li>
                     </ul>
                 </div>

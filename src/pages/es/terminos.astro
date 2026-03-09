@@ -1,0 +1,70 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "es";
+---
+
+<Layout title="Términos de Servicio — Paulina Velazquez" lang={lang} description="Términos de servicio del portafolio de Paulina Velazquez, Arquitecta.">
+  <Nav lang={lang} />
+
+  <main class="w-full">
+    <div class="flex w-full">
+      <div class="hidden md:flex w-1/12 grid-line-v spacing-block"></div>
+      <div class="w-full md:w-10/12 grid-line-v px-6 md:px-20 py-16 md:py-24 bg-canvas">
+        <span class="text-[10px] font-mono opacity-40 uppercase tracking-[0.3em] mb-6 block">Legal</span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tighter mb-16 text-primary">Términos de Servicio</h1>
+
+        <div class="max-w-2xl space-y-12 text-primary/70 font-light leading-relaxed">
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">1. Aceptación de los Términos</h2>
+            <p>Al acceder y utilizar este sitio web de portafolio de Paulina Velazquez, aceptas estar sujeto a estos términos de servicio. Si no estás de acuerdo con alguna parte de estos términos, por favor no utilices este sitio.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">2. Propósito del Portafolio</h2>
+            <p>Este sitio web sirve como portafolio profesional que muestra el trabajo arquitectónico de Paulina Velazquez. El contenido se presenta con fines informativos, de referencia y para consultas de encargos. No constituye una oferta contractual de servicios de arquitectura.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">3. Propiedad Intelectual</h2>
+            <p>Todo el contenido de este sitio web — incluyendo pero no limitado a dibujos arquitectónicos, análisis estructurales, renders, fotografías, diseños y textos — es propiedad intelectual de Paulina Velazquez salvo que se indique lo contrario. La reproducción, distribución o uso no autorizado de cualquier material sin consentimiento previo por escrito está prohibido.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">4. Consultas de Proyectos</h2>
+            <p>Enviar una consulta de proyecto a través de este sitio no establece una relación cliente-arquitecto. Un compromiso formal inicia únicamente al firmar un contrato de servicios mutuamente acordado. Todo alcance de proyecto, honorarios y plazos se definirán por escrito antes de que cualquier trabajo comience.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">5. Exactitud de la Información</h2>
+            <p>Aunque nos esforzamos por mantener el portafolio actualizado, no garantizamos la completitud o exactitud de la información mostrada. Los detalles de proyectos, estado de disponibilidad y alcance de servicios pueden cambiar sin previo aviso.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">6. Limitación de Responsabilidad</h2>
+            <p>Paulina Velazquez no será responsable por daños directos, indirectos o consecuentes derivados del uso de este sitio web o de la dependencia en cualquier información proporcionada en el mismo.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">7. Legislación Aplicable</h2>
+            <p>Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier disputa se resolverá ante los tribunales competentes de la Ciudad de México.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">8. Cambios a los Términos</h2>
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso continuado de este sitio después de los cambios constituye la aceptación de los términos actualizados.</p>
+          </div>
+
+          <div class="pt-8 border-t border-gridLine">
+            <p class="text-[10px] font-mono opacity-40 uppercase tracking-widest">Última actualización — Marzo 2026 · Ciudad de México, MX</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block w-1/12 spacing-block"></div>
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>

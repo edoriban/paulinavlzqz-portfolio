@@ -1,0 +1,70 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "es";
+---
+
+<Layout title="Política de Privacidad — Paulina Velazquez" lang={lang} description="Política de privacidad del portafolio de Paulina Velazquez, Arquitecta.">
+  <Nav lang={lang} />
+
+  <main class="w-full">
+    <div class="flex w-full">
+      <div class="hidden md:flex w-1/12 grid-line-v spacing-block"></div>
+      <div class="w-full md:w-10/12 grid-line-v px-6 md:px-20 py-16 md:py-24 bg-canvas">
+        <span class="text-[10px] font-mono opacity-40 uppercase tracking-[0.3em] mb-6 block">Legal</span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tighter mb-16 text-primary">Política de Privacidad</h1>
+
+        <div class="max-w-2xl space-y-12 text-primary/70 font-light leading-relaxed">
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">1. Información que Recopilamos</h2>
+            <p>Cuando te comunicas con Paulina Velazquez a través de este sitio de portafolio, podemos recopilar información personal que proporcionas voluntariamente, incluyendo tu nombre, correo electrónico, número telefónico y detalles del proyecto. No recopilamos información automáticamente mediante cookies o tecnologías de rastreo más allá de los registros básicos del servidor.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">2. Uso de tu Información</h2>
+            <p>La información que proporcionas se utiliza exclusivamente para:</p>
+            <ul class="list-disc list-inside mt-3 space-y-2">
+              <li>Responder a tus consultas de proyectos y solicitudes de encargos</li>
+              <li>Comunicarnos sobre posibles colaboraciones arquitectónicas</li>
+              <li>Proporcionar estimaciones, propuestas y documentación relacionada con el proyecto</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">3. Compartir Información</h2>
+            <p>No vendemos, intercambiamos ni compartimos tu información personal con terceros. Tus datos solo podrán ser compartidos con profesionales colaboradores (ingenieros, consultores) directamente involucrados en tu proyecto, y únicamente con tu consentimiento previo.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">4. Retención de Datos</h2>
+            <p>Conservamos tu información personal solo durante el tiempo necesario para cumplir con los fines para los que fue recopilada, o según lo requiera la legislación mexicana aplicable (Ley Federal de Protección de Datos Personales en Posesión de los Particulares).</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">5. Tus Derechos</h2>
+            <p>Bajo la ley mexicana de protección de datos, tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales (derechos ARCO). Para ejercer estos derechos, contáctanos por correo electrónico.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">6. Contenido del Portafolio</h2>
+            <p>Todas las obras arquitectónicas, dibujos, renders y fotografías mostradas en este sitio son propiedad intelectual de Paulina Velazquez o se usan con autorización. Se presentan con fines de portafolio y educativos únicamente.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">7. Cambios a esta Política</h2>
+            <p>Podemos actualizar esta política de privacidad periódicamente. Cualquier cambio se reflejará en esta página con una fecha de revisión actualizada.</p>
+          </div>
+
+          <div class="pt-8 border-t border-gridLine">
+            <p class="text-[10px] font-mono opacity-40 uppercase tracking-widest">Última actualización — Marzo 2026 · Ciudad de México, MX</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block w-1/12 spacing-block"></div>
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>

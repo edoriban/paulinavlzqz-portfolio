@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const lang = "en";
+---
+
+<Layout title="Terms of Service — Paulina Velazquez" lang={lang} description="Terms of service for the portfolio of Paulina Velazquez, Architect.">
+  <Nav lang={lang} />
+
+  <main class="w-full">
+    <div class="flex w-full">
+      <div class="hidden md:flex w-1/12 grid-line-v spacing-block"></div>
+      <div class="w-full md:w-10/12 grid-line-v px-6 md:px-20 py-16 md:py-24 bg-canvas">
+        <span class="text-[10px] font-mono opacity-40 uppercase tracking-[0.3em] mb-6 block">Legal</span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tighter mb-16 text-primary">Terms of Service</h1>
+
+        <div class="max-w-2xl space-y-12 text-primary/70 font-light leading-relaxed">
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">1. Acceptance of Terms</h2>
+            <p>By accessing and using this portfolio website of Paulina Velazquez, you agree to be bound by these terms of service. If you do not agree with any part of these terms, please do not use this site.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">2. Portfolio Purpose</h2>
+            <p>This website serves as a professional portfolio showcasing the architectural work of Paulina Velazquez. The content is presented for informational, reference, and commission inquiry purposes. It does not constitute a contractual offer for architectural services.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">3. Intellectual Property</h2>
+            <p>All content on this website — including but not limited to architectural drawings, structural analyses, renderings, photographs, designs, and text — is the intellectual property of Paulina Velazquez unless otherwise noted. Unauthorized reproduction, distribution, or use of any materials without prior written consent is prohibited.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">4. Project Inquiries</h2>
+            <p>Submitting a project inquiry through this site does not establish a client-architect relationship. A formal engagement begins only upon signing a mutually agreed service contract. All project scope, fees, and timelines will be defined in writing before any work commences.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">5. Accuracy of Information</h2>
+            <p>While we strive to keep the portfolio up to date, we make no guarantees regarding the completeness or accuracy of the information displayed. Project details, availability status, and scope of services may change without prior notice.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">6. Limitation of Liability</h2>
+            <p>Paulina Velazquez shall not be held liable for any direct, indirect, or consequential damages arising from the use of this website or reliance on any information provided herein.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">7. Governing Law</h2>
+            <p>These terms are governed by the laws of the United Mexican States. Any disputes shall be resolved in the competent courts of Mexico City.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wide">8. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. Continued use of this site after changes constitutes acceptance of the updated terms.</p>
+          </div>
+
+          <div class="pt-8 border-t border-gridLine">
+            <p class="text-[10px] font-mono opacity-40 uppercase tracking-widest">Last updated — March 2026 · Mexico City, MX</p>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block w-1/12 spacing-block"></div>
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
