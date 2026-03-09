@@ -544,14 +544,14 @@ const t = useTranslations(lang);
         >
           <div class="relative w-full h-full flex flex-col min-h-[300px]">
             <div class="flex-grow overflow-hidden bg-[#fafafa] flex">
-              <div class="w-1/2 h-[680px] overflow-hidden border-r border-gridLine">
+              <div class="hidden md:block w-1/2 h-[680px] overflow-hidden border-r border-gridLine">
                 <img
                   src="/images/sagrario.png"
                   class="w-full h-full object-contain grayscale opacity-90 mix-blend-multiply"
                   alt="Sagrario - Análisis de Perspectiva"
                 />
               </div>
-              <div class="w-1/2 h-[680px] overflow-hidden">
+              <div class="w-full md:w-1/2 h-[400px] md:h-[680px] overflow-hidden">
                 <img
                   src="/images/sagrario3.png"
                   class="w-full h-full object-contain grayscale opacity-90 mix-blend-multiply"
@@ -647,7 +647,7 @@ const t = useTranslations(lang);
     </section>
 
     <!-- Horizontal Separation Spacer with vertical grid lines -->
-    <div class="w-full grid-line-h h-12 hidden md:flex border-t border-gridLine">
+    <div class="w-full grid-line-h h-12 flex border-t border-gridLine">
       <div class="w-1/12 grid-line-v spacing-block"></div>
       <div class="w-7/12 grid-line-v spacing-block"></div>
       <div class="w-3/12 grid-line-v spacing-block"></div>
